@@ -23,7 +23,8 @@ blog_button:
 
 # Navigation buttons in the front page.
 nav:
-    - {title: Curriculum Vitae, url: 'http://project.onevcat.com'}
+    - {title: About, url: 'http://example.com'}
+    - {title: Curriculum Vitae, url: 'http://example.com'}
     - {title: Projects, url: 'http://example.com'}
 #    - {title: Publications, description: Publications, url: 'http://example.com'}
 
