@@ -16,17 +16,16 @@ highlighter: rouge
 # supported colors: blue, green, purple, red, orange or slate. If you need clear, leave it empty.
 cover_color: slate
 
-# The blog button should not be removed.
-# TO DO : MOVE BLOG BUTTON TO THE END
-blog_button:
-    title: Blog
-
 # Navigation buttons in the front page.
 nav:
-    - {title: About, url: 'http://example.com'}
-    - {title: Curriculum Vitae, url: 'http://example.com'}
-    - {title: Projects, url: 'http://example.com'}
+    - {title: About, url: '/#blog'} # if new window, add target
+    - {title: Curriculum Vitae, url: 'assets/pdfs/CV.pdf', target: '_blank'}
+    - {title: Projects, url: '/#blog'}
 #    - {title: Publications, description: Publications, url: 'http://example.com'}
+    
+# The blog button should not be removed.
+blog_button:
+    title: Blog
 
 # Pagination
 gems: [jekyll-paginate]
