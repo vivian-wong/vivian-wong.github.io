@@ -18,9 +18,9 @@ cover_color: slate
 
 # Navigation buttons in the front page.
 nav:
-    - {title: About, url: '/#blog'} # if new window, add target
+#    - {title: About, url: '/'} # if new window, add target
     - {title: Curriculum Vitae, url: 'assets/pdfs/CV.pdf', target: '_blank'}
-    - {title: Projects, url: '/#blog'}
+    - {title: Projects, url: '/'}
 #    - {title: Publications, description: Publications, url: 'http://example.com'}
     
 # The blog button should not be removed.
