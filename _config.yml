@@ -20,7 +20,7 @@ cover_color: slate
 # Navigation buttons in the front page.
 nav:
 #    - {title: About, url: '/'} # if new window, add target
-    - {title: Curriculum Vitae, url: 'assets/pdfs/CV.pdf', target: '_blank'}
+    - {title: Curriculum Vitae, url: 'cv.pdf', target: '_blank'}
     - {title: Projects, url: '/Projects'}
 #    - {title: Publications, description: Publications, url: 'http://example.com'}
     
