@@ -20,7 +20,7 @@ Society of Women Engineers (2014-2018)
 If you would like to chat with me about any of my past, present and future work, please send me an email via the little mail icon on the side panel to the left. I would likely want to know more about yours, too.  
 
 ### Personal Stuff: 
-Outside of work/school, I enjoy being active (hiking mostly; I am horrible at almost all sports that require some level of delicacy) for about 30% of the time, but would desperately need that other 70% for some recharge time indoor.  
+Outside of work/school, I enjoy being active (hiking & seeing the beauty in nature mostly - I am horrible at almost all sports that require some level of delicacy) for about 30% of the time, but would desperately need that other 70% for some recharge time indoor.  
 
 When I am in recharge mode, I either hang out with friends, play guitar, or play [Stardew Valley](https://stardewvalley.net/), a (farming, combat, love) game that makes you scratch your head to figure out how to balance personal life and work.  
 
