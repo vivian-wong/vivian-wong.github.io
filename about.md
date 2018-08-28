@@ -29,4 +29,4 @@ Like most people in the Bay Area, I should put up a picture of me in Yosemite.
 Like most people in an engineering major, we have so many friends.  
 
 So here is a gif that sums up those 3 key elements of a successful personal site photo mentioned above. This is me (leftmost with a camera) and a few of my best friends known since our undergrads trying to pose for a photo, without realizing that a video was actually being taken. 
-![](/assets/images/yosemite.gif)
+<img src="/assets/images/yosemite.gif" width="400" />
