@@ -1,7 +1,7 @@
 ---
 layout: post
 title: My Personal Site
-date: 2018-08-27 15:32:24.000000000 +09:00
+date: 2018-08-27
 tag: Personal
 ---
 

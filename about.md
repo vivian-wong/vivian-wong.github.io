@@ -4,10 +4,8 @@ title: About
 permalink: /about/
 ---
 ### Professional Stuff: 
-#### Education: 
-Master's Student in Structural Engineering - Stanford University, Stanford CA (expected Autumn 2018)  
-Bachelor's of Science in Civil Engineering - University of Illinois at Urbana-Champaign, Urbana IL (May 2017)  
-High School Diploma & International Baccalaureate Diploma - Bayview Secondary School, Richmond Hill ON, Canada (May 2014)  
+#### Timeline: 
+{% include timeline.html %}   
 
 #### Activities: 
 Co-Founder & President - Bridges to Prosperity UIUC Chapter (September 2017 - May 2018)  
