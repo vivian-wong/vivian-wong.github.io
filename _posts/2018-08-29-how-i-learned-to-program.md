@@ -2,7 +2,7 @@
 layout: post
 title: How I Learned to Program
 date: 2018-08-29
-tag: Reflection Work
+tags: reflection work
 ---
 
 Right now I'm running a deep RL network on my laptop and have not much to do other than waiting for it to train itself. 

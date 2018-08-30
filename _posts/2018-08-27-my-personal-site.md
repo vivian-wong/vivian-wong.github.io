@@ -2,7 +2,7 @@
 layout: post
 title: My Personal Site
 date: 2018-08-27
-tag: Personal
+tags: random
 ---
 
 I am building this website so that there could be one day when you look up "Vivian Wong" in a search engine looking for my information you would not find yourself more knowledgeable in Yu-Gi-Oh!
