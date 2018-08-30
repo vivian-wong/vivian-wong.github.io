@@ -757,15 +757,6 @@ input[type="tel"] {
   min-height: 100vh;
   margin: 0;
   font-family: 'Droid Sans', sans-serif; }
-  .timeline-body:before {
-    content: '';
-    position: absolute;
-    top: 25%;
-    left: 65%;
-    bottom: -20%;
-    transform: translateX(-50%);
-    width: 4px;
-    background-color: #2568A3; }
   .timeline-body .entries {
     width: calc(100% - 80px);
     max-width: 800px;
