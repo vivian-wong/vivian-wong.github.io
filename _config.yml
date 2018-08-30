@@ -11,7 +11,6 @@ url: http://vivian-wong.github.io
 permalink: /:year/:month/:title/
 
 # Format
-# TO DO: CHANGE HIGHLIGHTER COLOR
 highlighter: rouge
 
 # supported colors: blue, green, purple, red, orange or slate. If you need clear, leave it empty.
