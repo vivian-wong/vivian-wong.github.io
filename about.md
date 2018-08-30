@@ -18,7 +18,7 @@ Co-Founder & President - Bridges to Prosperity UIUC Chapter (September 2017 - Ma
 	- Helped construct 2 pedestrian bridges in developing communities in Central America  
 Field Representative - Saha Global, Ghana (Summer 2017)  
 Society of Women Engineers (2014-2018)  
-	- See me appearing on the WE17 Conference website [here](https://alltogether.swe.org/2017/10/swe-member-vivian-wong-is-always-connecting-always-engineering/)  
+	- See how I'm "always connecting, always engineering" on the WE17 Conference website [here](https://alltogether.swe.org/2017/10/swe-member-vivian-wong-is-always-connecting-always-engineering/)  
 
 If you would like to chat with me about any of my past, present and future work, please send me an email via the little mail icon on the side panel to the left. I would likely want to know more about yours, too.  
 
