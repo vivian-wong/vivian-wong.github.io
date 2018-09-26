@@ -5,6 +5,11 @@ permalink: /projects/
 ---
 Most of these projects can be found also on my [CV](https://vivian-wong.github.io/cv.pdf). This page only provides a brief description and (mostly) directs to links that provide more information. 
 
+### Traffic Signal Control Using Deep Reinforcement Learning
+#### July 2018 - Present, Hangzhou, China
+As a research intern in Alibaba Cloud, I used DQN-NAF to create a traffic signal control algorithm that could explore large action spaces, which compared to past literatures, aligned better with traffic lights in the real world.  
+View my internship summary presentation [**here**](https://www.slideshare.net/slideshow/embed_code/key/ct9TtTnpTZY7oQ).
+
 ### Building Detection from Satellite Imagery
 #### March - June 2018, Stanford, CA
 View our project report [**here**](https://cs230.stanford.edu/projects_spring_2018/reports/8290424.pdf).
