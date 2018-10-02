@@ -1,6 +1,6 @@
 ---
 layout: post
-title: My Personal Site
+title: Intro to My Personal Site
 date: 2018-08-27
 tags: random
 ---
