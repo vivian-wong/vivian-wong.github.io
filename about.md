@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 ### Timeline: 
-**(expected Autumn 2018)** | Master of Science in Structural Engineering - <a href="https://www.stanford.edu/">Stanford University</a>, Stanford CA  
+**(expected March 2019)** | Master of Science in Structural Engineering - <a href="https://www.stanford.edu/">Stanford University</a>, Stanford CA  
 **May 2017** | Bachelor of Science in Civil Engineering - <a href="https://illinois.edu/">University of Illinois at Urbana-Champaign</a>, Urbana IL  
 **May 2014** | High School Diploma & International Baccalaureate Diploma - <a href="http://www.yrdsb.ca/schools/bayview.ss/Pages/default.aspx">Bayview Secondary School</a>, Richmond Hill ON, Canada  
 **2011** | Dropped out of <a href="https://www.ibo.org/school/001730/">No.55 High School (IB Middle Years Program)</a>, Beijing, China  
