@@ -21,15 +21,3 @@ Society of Women Engineers (2014-2018)
 	- See how I'm "always connecting, always engineering" on the WE17 Conference website [here](https://alltogether.swe.org/2017/10/swe-member-vivian-wong-is-always-connecting-always-engineering/)  
 
 If you would like to chat with me about any of my past, present and future work, please send me an email via the little mail icon on the side panel to the left. I would likely want to know more about yours, too.  
-
-### Fun Fact: 
-Outside of work/school, I enjoy being active (hiking & seeing the beauty in nature mostly - I am horrible at almost all sports that require some level of delicacy) for about 30% of the time, but would desperately need that other 70% for some recharge time indoor.  
-
-When I am in recharge mode, I either hang out with friends, play guitar, or play [Stardew Valley](https://stardewvalley.net/), a (farming, combat, love) game that makes you scratch your head to figure out how to balance personal life and work.  
-
-Like most people on their personal websites, I should put up a picture of me in the mountains.  
-Like most people in the Bay Area, I should put up a picture of me in Yosemite.  
-Like most people in an engineering major, we have so many friends.  
-
-So here is a gif that sums up those 3 key elements of a successful personal site photo mentioned above. This is me (leftmost with a camera) and a few of my best friends known since our undergrads trying to pose for a photo, without realizing that a video was actually being taken. 
-<img src="/assets/images/yosemite.gif" width="400" />
