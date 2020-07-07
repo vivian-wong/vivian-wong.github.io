@@ -21,7 +21,7 @@ nav:
     - {title: Curriculum Vitae, url: 'cv.pdf', target: '_blank'} # if new window, add target
     - {title: About, url: 'about'} 
     - {title: Projects, url: 'projects'}
-#    - {title: Publications, description: Publications, url: 'http://example.com'}
+    - {title: Publications, url: 'publications'}
     
 # The blog button should not be removed.
 blog_button:
