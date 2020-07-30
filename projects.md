@@ -3,7 +3,13 @@ layout: page
 title: Projects
 permalink: /projects/
 ---
-Most of these projects can be found also on my [CV](https://vivian-wong.github.io/cv.pdf). This page only provides a brief description and (mostly) directs to links that provide more information. 
+Most of these projects can be found also on my [CV](https://vivian-wong.github.io/cv.pdf). This page only provides a brief description and (mostly) directs to links that provide more information. Please cite if you are using anything for your research. 
+
+### Social-TGCN: Human Trajectory Prediction with Temporal Graph Convolutional Network
+#### March - June 2020, Stanford, CA
+This project is intended to be a final project for CS 229. View the report [here](https://vivian-wong.github.io/CS229_Report.pdf), but was not submitted due to interruptions caused by the pandemic. In short, I used graph convolutional neural network (GCN) and gated recurrent unit (GRU) together to predict human trajectories. Here is the complete abstract: 
+
+Being able to understand and to predict the motion of humans in a crowded space is critical to the design of space and agents that navigate around the space, such as autonomous vehicles;;. The problem is difficult, however, given the complex nature of human interactions. A machine learning model used for trajectory prediction should be able to observe both the spatial and temporal information to foresee future trajectories. To do this, we propose Social Temporal Graph Convolutional Network (Social-TGCN), which uses graph convolutional network (GCN) to learn spatial knowledge, and Gated Recurrent Unit (GRU) to learn temporal knowledge. In this work, we show that a naive implementation of Social-TGCN can achieve a performance comparable to that of a pioneering work, Social-LSTM (Alahi et al., 2016), using standard human trajectory datasets used in the field. We also conduct a qualitative analysis on the pedestrian behaviors learned by the model.
 
 ### Traffic Signal Control Using Deep Reinforcement Learning
 #### July 2018 - Present, Hangzhou, China
