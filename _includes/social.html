@@ -11,6 +11,16 @@
   </li>
   {% endif %}
 
+  {% if site.social.scholar %}
+  <!-- Google Sacholar -->
+  <li class="navigation__item">
+    <a href="{{site.social.scholar}}" title="Google Scholar" target="_blank">
+      <i class='social ai ai-google-scholar'></i>
+      <span class="label">Google Scholar</span>
+    </a>
+  </li>
+  {% endif %}
+
   {% if site.social.github %}
   <!-- Github -->
   <li class="navigation__item">
@@ -51,16 +61,6 @@
   </li>
  -->
   
-  {% if site.social.scholar %}
-  <!-- Google Sacholar -->
-  <li class="navigation__item">
-    <a href="{{site.social.scholar}}" title="Google Scholar" target="_blank">
-      <i class='social ai ai-google-scholar'></i>
-      <span class="label">Google Scholar</span>
-    </a>
-  </li>
-  {% endif %}
-
   {% if site.social.mail %}
   <!-- Email -->
   <li class="navigation__item">
