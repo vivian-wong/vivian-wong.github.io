@@ -6,16 +6,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <title>Tag: work</title>
+  <title>Projects</title>
   <meta name="description" content="Hi! I am a PhD student at Stanford University studying Civil Engineering. My interest lies in solving critical urban problems with the help of AI. I also study how computer vision methods can be used to automatically monitor manufacturing processes.">
   <meta name="author" content="Vivian Wong">
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Tag: work">
+  <meta name="twitter:title" content="Projects">
   <meta name="twitter:description" content="Hi! I am a PhD student at Stanford University studying Civil Engineering. My interest lies in solving critical urban problems with the help of AI. I also study how computer vision methods can be used to automatically monitor manufacturing processes.">
   
   <meta property="og:type" content="article">
-  <meta property="og:title" content="Tag: work">
+  <meta property="og:title" content="Projects">
   <meta property="og:description" content="Hi! I am a PhD student at Stanford University studying Civil Engineering. My interest lies in solving critical urban problems with the help of AI. I also study how computer vision methods can be used to automatically monitor manufacturing processes.">
   
   <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
@@ -24,7 +24,7 @@
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
 
-  <link rel="canonical" href="http://localhost:4000/tag/work/">
+  <link rel="canonical" href="http://localhost:4000/projects/">
   <link rel="alternate" type="application/rss+xml" title="Vivian Wong" href="http://localhost:4000/feed.xml">
   
   <meta name="google-site-verification" content="3A8-p4v7feORKfqiFPwTio-iAz9l_coaazDU87PkkTc" />
@@ -41,18 +41,18 @@
 </head>
 
   	<!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>Tag: work | Vivian Wong</title>
+<title>Projects | Vivian Wong</title>
 <meta name="generator" content="Jekyll v3.8.3" />
-<meta property="og:title" content="Tag: work" />
+<meta property="og:title" content="Projects" />
 <meta name="author" content="Vivian Wong" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Hi! I am a PhD student at Stanford University studying Civil Engineering. My interest lies in solving critical urban problems with the help of AI. I also study how computer vision methods can be used to automatically monitor manufacturing processes." />
 <meta property="og:description" content="Hi! I am a PhD student at Stanford University studying Civil Engineering. My interest lies in solving critical urban problems with the help of AI. I also study how computer vision methods can be used to automatically monitor manufacturing processes." />
-<link rel="canonical" href="http://localhost:4000/tag/work/" />
-<meta property="og:url" content="http://localhost:4000/tag/work/" />
+<link rel="canonical" href="http://localhost:4000/projects/" />
+<meta property="og:url" content="http://localhost:4000/projects/" />
 <meta property="og:site_name" content="Vivian Wong" />
 <script type="application/ld+json">
-{"author":{"@type":"Person","name":"Vivian Wong"},"url":"http://localhost:4000/tag/work/","headline":"Tag: work","description":"Hi! I am a PhD student at Stanford University studying Civil Engineering. My interest lies in solving critical urban problems with the help of AI. I also study how computer vision methods can be used to automatically monitor manufacturing processes.","@type":"WebPage","@context":"http://schema.org"}</script>
+{"author":{"@type":"Person","name":"Vivian Wong"},"url":"http://localhost:4000/projects/","headline":"Projects","description":"Hi! I am a PhD student at Stanford University studying Civil Engineering. My interest lies in solving critical urban problems with the help of AI. I also study how computer vision methods can be used to automatically monitor manufacturing processes.","@type":"WebPage","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   	<!-- Global site tag (gtag.js) - Google Analytics -->
@@ -74,7 +74,7 @@
         <i class="fa fa-angle-up btn-mobile-close__icon hidden"></i>
     </span>
     
-    <header class="panel-cover " style="background-image: url('/assets/images/background-cover.jpg')">
+    <header class="panel-cover panel-cover--collapsed" style="background-image: url('/assets/images/background-cover.jpg')">
   <div class="panel-main">
 
     <div class="panel-main__inner panel-inverted">
@@ -176,13 +176,57 @@
 
     <div class="content-wrapper">
         <div class="content-wrapper__inner">
-            <div class="post">
-<h1>Tag: work</h1>
-<ul>
+            <article class="post-container post-container--single" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <h1 class="post-title">Projects</h1>
+  </header>
 
-</ul>
-</div>
-<hr>
+  <section class="post">
+    <p>Most of these projects can be found also on my <a href="https://vivian-wong.github.io/cv.pdf">CV</a>. This page only provides a brief description and (mostly) directs to links that provide more information. Please cite if you are using anything for your research.</p>
+
+<h3 id="social-tgcn-human-trajectory-prediction-with-temporal-graph-convolutional-network">Social-TGCN: Human Trajectory Prediction with Temporal Graph Convolutional Network</h3>
+<h4 id="march---june-2020-stanford-ca">March - June 2020, Stanford, CA</h4>
+<p>This project is intended to be a final project for CS 229. View the report <a href="https://vivian-wong.github.io/CS229_Report.pdf">here</a> and codes <a href="https://github.com/vivian-wong/Social-TGCN/">here</a>. In short, I used graph convolutional neural network (GCN) and gated recurrent unit (GRU) together to predict human trajectories. Here is the complete abstract:</p>
+
+<blockquote>
+  <p>Being able to understand and to predict the motion of humans in a crowded space is critical to the design of space and agents that navigate around the space, such as autonomous vehicles;;. The problem is difficult, however, given the complex nature of human interactions. A machine learning model used for trajectory prediction should be able to observe both the spatial and temporal information to foresee future trajectories. To do this, we propose Social Temporal Graph Convolutional Network (Social-TGCN), which uses graph convolutional network (GCN) to learn spatial knowledge, and Gated Recurrent Unit (GRU) to learn temporal knowledge. In this work, we show that a naive implementation of Social-TGCN can achieve a performance comparable to that of a pioneering work, Social-LSTM (Alahi et al., 2016), using standard human trajectory datasets used in the field. We also conduct a qualitative analysis on the pedestrian behaviors learned by the model.</p>
+</blockquote>
+
+<h3 id="traffic-signal-control-using-deep-reinforcement-learning">Traffic Signal Control Using Deep Reinforcement Learning</h3>
+<h4 id="july-2018---present-hangzhou-china">July 2018 - Present, Hangzhou, China</h4>
+<p>As a research intern in Alibaba Cloud, I used DQN-NAF to create a traffic signal control algorithm that could explore large action spaces, which compared to past literatures, aligned better with traffic lights in the real world.<br />
+View my internship summary presentation <a href="https://www.slideshare.net/slideshow/embed_code/key/ct9TtTnpTZY7oQ"><strong>here</strong></a>.</p>
+
+<h3 id="building-detection-from-satellite-imagery">Building Detection from Satellite Imagery</h3>
+<h4 id="march---june-2018-stanford-ca">March - June 2018, Stanford, CA</h4>
+<p>View our project report <a href="https://cs230.stanford.edu/projects_spring_2018/reports/8290424.pdf"><strong>here</strong></a>.</p>
+
+<h3 id="global-architectureengineeringconstruction-aec-project">Global Architecture/Engineering/Construction (AEC) Project</h3>
+<h4 id="january---june-2018-stanford-ca">January - June 2018, Stanford, CA</h4>
+<p>In this class project, I designed the structural system for a green building on a (imaginary) site in Germany with a team of students in various disciplines. Every detail of the project is just too gory to be shown here. But if you have to look, you can find it <a href="http://pbl.stanford.edu/AEC%20projects/projpage.htm"><strong>here</strong></a>. Look for project River 2017-2018.</p>
+
+<h3 id="wheelchair-rider-simulation">Wheelchair Rider Simulation</h3>
+<h4 id="january---march-2018-stanford-ca">January - March 2018, Stanford, CA</h4>
+<p>I am honored to have done an independent study with <a href="https://cee.stanford.edu/people/kincho-law">Professor Law</a> and <a href="https://cee.stanford.edu/people/renate-fruchter">Dr. Fruchter</a> on the simulation of a wheelchair rider. View a <a href="https://youtu.be/eLto7yCQUto"><strong>demo video</strong></a> of a wheelchair rider, who moves around the building we rendered in the AEC project mentioned above. This simulation was built upon an existing software, <a href="https://www.3dicc.com/">Terf</a>.</p>
+
+<h3 id="citizen-engagement-using-augmented-reality--wearable-technology">Citizen Engagement Using Augmented Reality &amp; Wearable Technology</h3>
+<h4 id="december-2017-stanford-ca">December 2017, Stanford, CA</h4>
+<p>This is a short independent study I did on Defining Smart Cities Seminar (CEE225). 
+View my presentation on Human Cities Expo 2017 <a href="https://vimeo.com/248506752"><strong>here</strong></a></p>
+
+<h3 id="software--hardware-development-for-quanser-shake-table-ii-">Software &amp; Hardware Development for Quanser Shake Table II ﻿</h3>
+<h4 id="september-2015---may-2017-urbana-il">September 2015 - May 2017, Urbana, IL</h4>
+<p>I was lucky to have done an REU (Research Experience for Undergraduates) project with <a href="https://cee.illinois.edu/directory/profile/bfs">Professor Spencer</a> at his <a href="http://sstl.cee.illinois.edu/">SSTL Lab</a>. 
+To view my poster at the UIUC Undergraduate Research Symposium in 2016, follow <a href="https://www.ideals.illinois.edu/handle/2142/90246"><strong>this link</strong></a>.</p>
+
+<hr />
+<p><strong>Disclaimer :</strong> This website is under constant modification. 
+If you find something isn’t right then,
+I might be doing some change in the back-end.</p>
+
+  </section>
+</article>
+
         	<section class="footer">
     <footer>
     	<h2>Blog Post Tags</h2>

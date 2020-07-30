@@ -24,7 +24,9 @@
                 {% for item in site.nav %}
                   <li class="navigation__item"><a href="/{{item.url}}" target="{{item.target}}" title="{{item.description}}">{{item.title}}</a></li>
                 {% endfor %}
-                <li class="navigation__item"><a href="/#blog" title="{{site.blog_button.description}}" class="blog-button">{{site.blog_button.title}}</a></li>
+                {% if site.blog_button.title %}
+                  <li class="navigation__item"><a href="/#blog" title="{{site.blog_button.description}}" class="blog-button">{{site.blog_button.title}}</a></li>
+                {% endif %}
               </ul>
             </nav>
           </div>
