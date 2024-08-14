@@ -10,23 +10,28 @@
   body {
     font-size: 1rem;
     font-family: sans-serif;
-    width:auto;
+    width: auto;
     margin: 0px;
     padding: 0;
     border: 0;
   }
   main {
 
-    padding-top: 30px;
+    padding-top: 50px;
     font-size: 1rem;
     font-family: sans-serif;
-    max-width: 1024px;
-    margin: 16px;
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 80%;
   }
 
   a:link {color:#0066CC;} /* sets normal link color */
   a:visited {color:#0066CC;} /* sets visited link color */
   a:active {color:#0066CC;} /* sets active link color */
+
+  html {
+    scroll-padding-top: 50px; /* height of sticky navbar */
+  }
 
   ol { 
     list-style-position:inside; 
@@ -35,9 +40,11 @@
   }
 
   img {
-    height: 200px;
-    float: left;
-    padding-right:16px;
+    width: auto;
+    height: auto;
+    max-width: 15vw;
+    max-height: 20vw;
+    margin-top: 20px;
   } 
 
   .topnav {
@@ -67,7 +74,19 @@
     display: none;
   }
 
-  @media screen and (max-width: 800px) {
+  .horizontal {
+      display: flex;
+      flex-direction: row;
+  }
+
+  .vertical {
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+    margin-left: 10px;
+  }
+
+  @media screen and (max-width: 1017px) {
     .topnav a:not(:first-child) {display: none;}
     .topnav a.icon {
       float: right;
@@ -75,7 +94,7 @@
     }
   }
 
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 1017px) {
     .topnav.responsive {position: relative;}
     .topnav.responsive .icon {
       position: absolute;
@@ -90,18 +109,19 @@
   }
 
 </style>
-<title>Vivian Wong - Stanford PhD Candidate</title>
+<title>Vivian Wong (She/Her)- Stanford PhD Candidate</title>
 </head>
 <body>
 <nav>
   <div class="topnav" id="myTopnav">
-    <a style="color: #f2f2f2; font-size: 20px" href=".">Vivian Wong</a>
+    <a style="color: #f2f2f2; font-size: 20px" href=".">Vivian Wong (She/Her)</a>
     <a href="#about">About</a>
+    <a href="#opportunities">Opportunities</a>
     <a href="#pubs">Publications</a>
     <a href="#working">Working</a>
-    <a href="#teaching">Teaching</a>
+    <a href="#teaching">Teaching &amp; Service</a>
     <a href="#awards">Awards &amp; Scholarships</a>
-    <a href="#fun">Fun</a>
+    <a href="#outreach">Outreach</a>
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
       <i class="fa fa-bars"></i>
     </a>
@@ -110,55 +130,162 @@
 </nav>
 
 <main>
-<div id="about">
-      <img src="profile.jpg">
+<div class="horizontal", id="about">
+    <div class="vertical">
+      <img src="profile.jpg" alt="Profile Image" class="img">
+      <img src="cropped.jpg" alt="Artwork Image" class="img">
+    </div>
+    <div class="vertical">
       <h1>About</h1>
       <p>
-        Hi! I am Vivian Wong, a Ph.D. student in the Stanford University Civil Engineering department, with a focus in engineering informatics (data analysis and management). I do research in the <a href="http://eil.stanford.edu">Engineering Informatics Group</a>. Currently, I am working on: 
+      Hi! I am Vivian Wong, a Ph.D. student in the Stanford University Civil Engineering department, where I was fortunate to be advised by <a href="http://eil.stanford.edu/law/">Prof. Kincho Law</a>. I am affiliated with the <a href="http://eil.stanford.edu">Engineering Informatics Group</a> and the <a href="https://korea.stanford.edu">Stanford Center at the Incheon Global Campus</a>. I completed my M.S. from Stanford University from 2017-2019 and my B.S. from University of Illinois at Urbana-Champaign from 2014-2017. My hometown is the lovely city of Toronto, Canada, and I also spent a delightful amount of my childhood in the cities of Hong Kong and Beijing.
       </p>
-      <ol>
-        <li>Using spatiotemporal data to understand human behaviour and mobility in urban systems</li>
-        <li>AI applications to smart manufacturing</li>
-      </ol>
       <p>
-        I received my M.S. from Stanford University in 2019 and my B.S. from University of Illinois at Urbana-Champaign in 2017. My hometown is Toronto, Canada, and I also spent a great amount of my childhood in the lovely cities of Hong Kong and Beijing. 
+      I am broadly interested in identifying and addressing real-world motivated problems to assist in the design and management of our modern urban environments. My projects typically involve some combination of machine learning, problem formulation inspired by practical concerns, and systems implementation. Specifically, my doctoral research encompasses two key areas:  1) Using spatiotemporal data to understand <b>human behaviour and mobility in urban systems</b>; 2) Modern data science applications to introduce more automation in <b>manufacturing operations</b>. I am also passionate about STEM education, diversity, and outreach. See <a href="#outreach">here</a> for more details.
+      </p>
+      <p>
+      <b>In August 2024, I'll be joining the University of Florida as an Assistant Professor in AI for the <a href="https://dcp.ufl.edu">School of Design, Construction and Planning</a>.</b> I will be jointly appointed by the Department of Urban Regional Planning (50%) and the Rinker School of Construction Management(50%). My research group has 1-2 PhD openings starting Fall 2024 or Spring 2025 with a focus on applied AI/ML research in the domain of urban societal systems. For a brief description of my research, see above - you can also read my <a href="Wong_RS_online.pdf">Research Statement</a>. Please see <a href="#opportunities">here</a> for more details on the positions and how to reach out.
+      </p>
+      <p>
+        Credit of the photo goes to Fangze Liu. Credit of the artwork goes to <a href="https://www.tudelft.nl/en/ide/about-ide/people/goncalves-mg">Professor Milene Goncalves</a>.
+      </p>
+
       </p>
       <!-- Icons -->
-      <a  href="https://scholar.google.com/citations?user=PsGj7jMAAAAJ&hl=en"><i class="ai ai-google-scholar-square ai-2x"></i></a>
-      <a  href="https://www.linkedin.com/in/wong-vivian"><i class="fa fa-linkedin fa-2x"></i></a>
-      <a  href="mailto: vwwong3@stanford.edu"><i class="fa fa-envelope fa-2x"></i></a>
+      <div class="horizontal">
+        <a  href="https://scholar.google.com/citations?user=PsGj7jMAAAAJ&hl=en"><i class="ai ai-google-scholar-square ai-2x"></i></a>
+        <a  href="https://www.linkedin.com/in/wong-vivian"><i class="fa fa-linkedin fa-2x"></i></a>
+        <a  href="mailto: vwwong3@stanford.edu"><i class="fa fa-envelope fa-2x"></i></a>
+        <a  href="Wong_CV_online.pdf"><i class="ai ai-cv ai-2x"></i></a>
+      </div>
+    </div>
+</div>
+
+<div id="opportunities">
+    <h1>Opportunities</h1>
+    <p>My research group has 1-2 PhD openings starting Fall 2024 or Spring 2025 with a focus on <b>applied AI/ML research in the domain of urban societal systems</b>. For a brief description of my research, see above - you can also read my <a href="Wong_RS_online.pdf">Research Statement</a>. 
+    </p>
+    <p>
+    Students will receive full tuition waiver and stipends in the amount outlined by UF throughout the entire duration of the studies (~4 years). The PhD degree is a STEM designated degree in either URP or CM, and the research is expected to be a part of UF's larger <a href="https://ai.ufl.edu">AI initiative</a>.I also encourage students to pursue a PhD minor or another MS degree in CS/stats/EE, as well as summer internships in the industry, throughout the duration of the PhD. Since we're past the DCP PhD application deadline already, if you are interested in joining my group, please fill out this <a href="https://forms.gle/VufWP9FvzrpHagxp8">Google form</a>. In the form you will be asked to provide your CV and to answer 3 questions briefly. We'll be in touch about the next steps if we're a good fit! Students should meet <a href="https://dcp.ufl.edu/academics/phd8/phd-admissions/#:~:text=The%20DCP%20requires%20that%20applicants,score%20of%2080%20or%20higher.">UF DCP PhD admission requirements</a>, and have strong math/stats/programming background and passion for applied AI/ML/DL research. 
+    </p>
+    <p>
+      <b>Why University of Florida?</b> Top 30 university in the US (USNews 2024); University-wide AI initiative with a $70 million partnership with NVIDIA - provides HiperGator access for computing needs and collaborative research environment with AI faculties; Location-wise, Gainesville is just ~100 minutes from Disney, Universal, springs and white sandy beaches and Florida weather is (I'm guessing) also nice!
+    </p>
+    <p>
+    For UF undergraduate/MS/rotating PhD students interested in conducting research in our group, please reach me directly by email to discuss mutual interest (vwwong3-at-stanford-dot-edu). Please attach your CV/resume and include your interests with the subject "Prospective UF Student Researcher”.
+    </p>
 </div>
 
 <div id="pubs">
   <h1>Publications</h1>
-    <!-- Year 2021 Entries -->
-    <h2>2021</h2>
-      <p style="margin-bottom:9.0pt">
-              <span style="font-family:Arial">V. W. H. Wong, M. Ferguson, K. H. Law, Yung-Tsun T. Lee and P. Witherell,
-            "Segmentation of Additive Manufacturing Defects Using U-Net",
-                <i></i> (Submitted to Journal of Computing and Information Science in Engineering).
-      </p>
-      <p style="margin-bottom:9.0pt">
-              <span style="font-family:Arial">V. W. H. Wong, S. H. Kim, J. Park, J. Park, K. H. Law,  
-            <a href="http://eil.stanford.edu/publications/vivian_wong/gnn_sbjssp.pdf">"Swap-Allowed Blocking Job Shop Scheduling Using Graph Neural Network and Reinforcement Learning"</a>, 
-                <i></i> (Submitted).
-      </p>
-      <p style="margin-bottom:9.0pt">
-              <span style="font-family:Arial">V. W. H. Wong, M. Ferguson, K. H. Law, Yung-Tsun T. Lee and P. Witherell,  
-            <a href="http://eil.stanford.edu/publications/vivian_wong/am_unet_cie.pdf">"Segmentation of Additive Manufacturing Defects Using U-Net"</a>, 
-                <i>41th Computers and Information in Engineering Conference (CIE).</i> August 17-20, 2021.
-      </p>
+
+  <!-- Year 2023 Entries -->
+ <tr style='mso-yfti-irow:53;height:21.0pt'>
+  <td style='padding:.75pt .75pt .75pt .75pt;height:21.0pt'>
+  <h2>2023</h2>
+  </td>
+</tr>
+
+ <tr style="mso-yfti-irow:80;height:52.5pt">
+    <td valign="top" style="padding:.75pt .75pt .75pt .75pt;height:52.5pt">
+       <p style="margin-bottom:9.0pt">
+	      <span style="font-family:Arial">V. W. H. Wong, S. H. Kim, J. Park, J. Park and K. H. Law,
+			<a href="http://eil.stanford.edu/publications/vivian_wong/ISBJSSP_JMSE_EIL.pdf">"Generating Dispatching Rules for the Interrupting Swap-Allowed Blocking Job Shop Problem Using Graph Neural Network and Reinforcement Learning"</a>,
+	      	<i>ASME Journal of Manufacturing Science and Engineering, Jan 2024; 146(1): 011009</i>, 2023. https://doi.org/10.1115/1.4063652
+	  </p>
+    </td>
+ </tr>
+
+ <tr style="mso-yfti-irow:80;height:52.5pt">
+    <td valign="top" style="padding:.75pt .75pt .75pt .75pt;height:52.5pt">
+       <p style="margin-bottom:9.0pt">
+	      <span style="font-family:Arial">M. M. Sato, V. W. H. Wong, K. H. Law, H. Yeung, and P. Witherell,
+			"Explainability of Laser Powder Bed Fusion Melt Pool Classification Using Deep Learning",
+	      	<i>International Design Engineering Technical Conferences and Computers and Information in Engineering Conference</i>, Boston, MA, Aug. 20-23, 2023.
+	  </p>
+    </td>
+ </tr>
+
+ <tr style="mso-yfti-irow:80;height:52.5pt">
+    <td valign="top" style="padding:.75pt .75pt .75pt .75pt;height:52.5pt">
+       <p style="margin-bottom:9.0pt">
+	      <span style="font-family:Arial">V. W. H. Wong and K. H. Law, <a href="http://eil.stanford.edu/publications/vivian_wong/i3ce-9338.pdf">Modeling Crowd Data and Spatial Connectivity as Graphs for Crowd Flow Forecasting in Public Urban Space</a>. <i>ASCE International Conference on Computing in Civil Engineering (i3CE)</i>, Corvallis, OR, June 25-28, 2023. https://ascelibrary.org/doi/10.1061/9780784485248.025
+	  </p>
+    </td>
+ </tr>
+
+ <tr style="mso-yfti-irow:80;height:52.5pt">
+    <td valign="top" style="padding:.75pt .75pt .75pt .75pt;height:52.5pt">
+       <p style="margin-bottom:9.0pt">
+	      <span style="font-family:Arial">V. W. H. Wong, S. H. Kim, J. Park, J. Park and K. H. Law,
+			<a href="http://eil.stanford.edu/publications/vivian_wong/isbjssp_msec.pdf">"Generating Dispatching Rules for the Interrupting Swap-Allowed Blocking Job Shop Problem Using Graph Neural Network and Reinforcement Learning"</a>,
+	      	<i>Manufacturing Science and Engineering Conference (MSEC)</i>, New Brunswick, NJ, June 12-16, 2023.
+	  </p>
+    </td>
+ </tr>
+
+  <tr style="mso-yfti-irow:80;height:52.5pt">
+    <td valign="top" style="padding:.75pt .75pt .75pt .75pt;height:52.5pt">
+       <p style="margin-bottom:9.0pt">
+	      <span style="font-family:Arial">V. W. H. Wong and K. H. Law, <a href="http://eil.stanford.edu/publications/vivian_wong/algorithms-16-00154.pdf">Fusion of CCTV Video and Spatial Information for Automated Crowd Congestion Monitoring in Public Urban Spaces</a>. <i>Algorithms</i>, Mar 2023, 16(3):154. https://doi.org/10.3390/a16030154.
+	  </p>
+    </td>
+ </tr>
+
+    <!-- Year 2022 Entries -->
+ <tr style='mso-yfti-irow:53;height:21.0pt'>
+  <td style='padding:.75pt .75pt .75pt .75pt;height:21.0pt'>
+  <h2>2022</h2>
+  </td>
+</tr>
+
+ <tr style="mso-yfti-irow:80;height:52.5pt">
+    <td valign="top" style="padding:.75pt .75pt .75pt .75pt;height:52.5pt">
+       <p style="margin-bottom:9.0pt">
+	      <span style="font-family:Arial">M. M. Sato, V. W. H. Wong, K. H. Law, H. Yeung, Z. Yang, B. Lane and P. Witherell,
+			<a href="http://eil.stanford.edu/publications/matthew_sato/AM_unsupervised_and_supervised.pdf">"Anomaly Detection of Laser Powder Bed Fusion Melt Pool Images Using Combined Unsupervised and Supervised Learning Methods"</a>,
+	      	<i>International Design Engineering Technical Conferences and Computers and Information in Engineering Conference</i>, St. Louis, MO, Aug. 14-17 2022.
+	  </p>
+    </td>
+ </tr>
+
+ <tr style="mso-yfti-irow:80;height:52.5pt">
+    <td valign="top" style="padding:.75pt .75pt .75pt .75pt;height:52.5pt">
+       <p style="margin-bottom:9.0pt">
+	      <span style="font-family:Arial">V. W. H. Wong, M. Ferguson, K. H. Law, Y. T. Lee and P. Witherell,  
+			<a href="http://eil.stanford.edu/publications/vivian_wong/am_unet_jcise.pdf">"Segmentation of Additive Manufacturing Defects Using U-Net"</a>, 
+	      	<i>ASME Journal of Computing and Information Science in Engineering.</i> June 2022; 22(3): 031005. https://doi.org/10.1115/1.4053078
+	  </p>
+    </td>
+ </tr>
+
+<!-- Year 2021 Entries -->
+ <tr style='mso-yfti-irow:53;height:21.0pt'>
+  <td style='padding:.75pt .75pt .75pt .75pt;height:21.0pt'>
+  <h2>2021</h2>
+  </td>
+</tr>
+
+ <tr style="mso-yfti-irow:80;height:52.5pt">
+    <td valign="top" style="padding:.75pt .75pt .75pt .75pt;height:52.5pt">
+       <p style="margin-bottom:9.0pt">
+	      <span style="font-family:Arial">V. W. H. Wong, M. Ferguson, K. H. Law, Y. T. Lee and P. Witherell,  
+			<a href="http://eil.stanford.edu/publications/vivian_wong/am_unet_cie.pdf">"Segmentation of Additive Manufacturing Defects Using U-Net"</a>, 
+	      	<i>41th Computers and Information in Engineering Conference (CIE).</i> August 17-20, 2021.
+	  </p>
+    </td>
+ </tr>
     <!-- Year 2020 Entries -->
     <h2>2020</h2>
       <p style="margin-bottom:9.0pt">
-              <span style="font-family:Arial">V. W. H. Wong, M. Ferguson, K. H. Law, Yung-Tsun T. Lee and P. Witherell,  
+              <span style="font-family:Arial">V. W. H. Wong, M. Ferguson, K. H. Law, Y. T. Lee and P. Witherell,  
             <a href="http://eil.stanford.edu/publications/vivian_wong/am_3dunet_aaai.pdf">"Automatic Volumetric Segmentation of Additive Manufacturing Defects with 3D U-Net"</a>, 
             <i>AAAI 2020 Spring Symposia</i>, Stanford, CA, USA, Mar 23-25, 2020</span>
       </p>
     <!-- Year 2019 Entries -->
     <h2>2019</h2>
       <p style="margin-bottom:9.0pt">
-              <span style="font-family:Arial">V. W. H. Wong, M. Ferguson, K. H. Law and Yung-Tsun T. Lee,  
+              <span style="font-family:Arial">V. W. H. Wong, M. Ferguson, K. H. Law and Y. T. Lee,  
             <a href="http://eil.stanford.edu/publications/vivian_wong/assistive_learning.pdf">"An Assistive Learning Workflow on Annotating Images for Object Detection"</a>, 
             <i>2019 IEEE International Conference on Big Data (IEEE BigData 2019)</i>, Los Angeles, CA, USA, Dec 9-12, 2019</span>
       </p>
@@ -167,34 +294,45 @@
 <div id="working">
   <h1>Working</h1>
   <ul>
-    <li><b>Summer 2018</b>: Research intern in Alibaba Cloud's City Brain project. </li>
+    <li><b>Summer 2022</b>: Applied Scientist intern, Amazon's Softlines Discovery. Developed models for evaluating brands. 
+    <li><b>Summer 2018</b>: Research intern, Alibaba Cloud's City Brain project. </li>
   </ul>
 </div>
 
 <div id="teaching">
-  <h1>Teaching</h1>
+  <h1>Teaching and Service</h1>
   <ul>
-    <li><b>Winter 2020</b>: Teaching assistant for Structural Dynamics (CEE 283)</li>
-    <li><b>Autumn 2019</b>: Teaching assistant for Finite Element Methods in Structural Dynamics (CEE 284)</li>
+    <li><b>Winter 2020, 2022</b>: Teaching assistant for Structural Dynamics (CEE 283)</li>
+    <li><b>Autumn 2019, 2021, 2022</b>: Teaching assistant for Finite Element Methods in Structural Dynamics (CEE 284)</li>
     <li><b>Fall 2016</b>:  Instructor for Engineering 100 and served as a peer advisor/mentor to freshmen. </li>
   </ul>
+  Journal Reviewer: IEEE Transactions on Neural Networks and Learning System, Optimization Letters, Automation in Construction
+  Conference Reviewer: IEEE Big Data Conference 2019
 </div>
 
 <div id="awards">
   <h1>Awards and Scholarships</h1>
   <ul>
-    <li>Blume Reseasrch Fellowship, Stanford University, 2019</li>
+    <li>Blume Research Fellowship, Stanford University, 2019</li>
+    <li>James Scholar, UIUC, 2014-2017</li>
     <li>Earle J. Wheeler Scholarship, 2016</li>
     <li>Fred S. Bailey International Service Travel Scholarship for Cause-Driven Leaders, 2016 </li>
     <li>International Engineering Fellowship, 2016 </li>
     <li>Wayne C. Teng Scholarship, 2015 </li>
+    <li>Dean's List, UIUC, 2014-2015 </li>
   </ul>
 </div>
 
-<div id="fun">
-  <h1>Fun</h1>
-  <p>Favorite <a href="http://phdcomics.com/comics/archive.php?comicid=1924">PhD comics</a></p>
-</div>
+<div id="outreach">
+  <h1>Outreach</h1>
+  My father's side of the family were Cambodian refugees. Their escape from the turbulent era of the Cambodian civil war taught me the values of perseverance, dedication, and resilience. These lessons have profoundly influenced my worldview and drive my work not just for diversity, equity, and inclusion, but also for social and environmental justice more broadly. I am fortunate to have participated in many awesome groups:</li>
+    <ul>
+        <li>Suspension Bridge Projects in Guatemala and Panama: Cofounded the <a href="https://uiucbridges.wordpress.com/">EIA chapter at UIUC</a>, I spent two memorable summers dedicated to building suspension bridges in underdeveloped communities in Guatemala and Panama. By collaborating with local communities and leveraging engineering expertise, we provided safer and more accessible transportation options, enhancing connectivity and improving the quality of life for residents. We were featured on the UIUC CEE Department news: <a href="https://cee.illinois.edu/news/student-organization-bridges-gaps-internationally">here</a>. </li>
+        <li>Saha Global field representative: Leveraging travel grants, I volunteered for <a href="https://sahaglobal.org">Saha Global</a>, a non-profit organization focused on sustainable development for low-income villages in West Africa. In Ghana, I contributed to the construction of solar-powered phone charging stations, empowering communities with access to reliable energy.</li>
+        <li>Society of Women Engineering (SWE): During my undergraduate studies, I dedicated my time and energy to SWE, advocating for gender equality in the engineering field. Recognizing my commitment, I was selected as the <a href="https://alltogether.swe.org/2017/10/swe-member-vivian-wong-is-always-connecting-always-engineering/">Always Connecting representative </a> for the annual conference, where I shared my awesome experience with SWE. </li>
+        <li>Shakes and Quakes Outreach at Sangamon Elementary School: Volunteering at Shakes and Quakes, I had the opportunity to engage with young students, fostering their interest in science and engineering. By organizing interactive educational activities using Legos and shake tables, I aimed to inspire the next generation of problem solvers and innovators.</li>
+        <li>Stanford Community Associate: At Stanford, I was a <a href="https://glo.stanford.edu/glo-services/community-associates">Community Associate</a> from 2018-2019. Working with the Graduate Life Office, I coordinated many multicultural, social, educational and fun events during the academic year to foster a sense of community in the Kennedy Graduate Residence. 
+    </ul>
 </main>
 
 <script>
