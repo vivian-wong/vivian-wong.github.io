@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Schedule</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles for better print appearance */
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-print-color-adjust: exact; /* Ensures colors print in Chrome/Safari */
+            color-adjust: exact; /* Ensures colors print in Firefox */
+        }
+        @media print {
+            body {
+                margin: 0;
+                padding: 20px;
+            }
+            .no-print {
+                display: none;
+            }
+            .printable-container {
+                box-shadow: none !important;
+                border: 1px solid #e2e8f0;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 flex items-center justify-center min-h-screen p-4 sm:p-6 lg:p-8">
+
+    <div class="w-full max-w-5xl mx-auto printable-container">
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <!-- Header Section -->
+            <div class="p-6 bg-gray-800 text-white text-center">
+                <h1 class="text-2xl sm:text-3xl font-bold">Vivian Wong's Weekly Schedule</h1>
+                <p class="text-gray-300 mt-1">Fall 2025</p>
+            </div>
+
+            <!-- Timetable Section -->
+            <div class="p-4 sm:p-6">
+                <div class="overflow-x-auto">
+                    <table class="w-full border-collapse text-center">
+                        <thead>
+                            <tr>
+                                <th class="w-24 p-3 font-semibold text-sm text-gray-600 border-b-2 border-gray-200">Time</th>
+                                <th class="p-3 font-semibold text-sm text-gray-600 border-b-2 border-gray-200">Monday</th>
+                                <th class="p-3 font-semibold text-sm text-gray-600 border-b-2 border-gray-200">Tuesday</th>
+                                <th class="p-3 font-semibold text-sm text-gray-600 border-b-2 border-gray-200">Wednesday</th>
+                                <th class="p-3 font-semibold text-sm text-gray-600 border-b-2 border-gray-200">Thursday</th>
+                                <th class="p-3 font-semibold text-sm text-gray-600 border-b-2 border-gray-200">Friday</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-sm">
+                            <!-- 12:00 PM Row -->
+                            <tr>
+                                <td class="p-3 h-16 border align-top text-gray-500 font-semibold">12:00 PM</td>
+                                <td class="border"></td>
+                                <td class="border"></td>
+                                <td class="border" rowspan="10"></td>
+                                <td class="border"></td>
+                                <td class="border" rowspan="10"></td>
+                            </tr>
+                            <!-- 12:30 PM Row -->
+                            <tr>
+                                <td class="p-3 h-16 border align-top text-gray-500 font-semibold">12:30 PM</td>
+                                <td class="border"></td>
+                                <td class="p-2 border bg-purple-100 text-purple-800" rowspan="2">
+                                    <div class="font-bold">Office Hours</div>
+                                    <div class="text-xs">(By Appointment)</div>
+                                    <div class="text-xs mt-1">12:30 PM - 1:30 PM</div>
+                                </td>
+                                <td class="p-2 border bg-purple-100 text-purple-800" rowspan="2">
+                                    <div class="font-bold">Office Hours</div>
+                                    <div class="text-xs">(By Appointment)</div>
+                                    <div class="text-xs mt-1">12:30 PM - 1:30 PM</div>
+                                </td>
+                            </tr>
+                            <!-- 1:00 PM Row -->
+                            <tr>
+                                <td class="p-3 h-16 border align-top text-gray-500 font-semibold">1:00 PM</td>
+                                <td class="p-2 border bg-yellow-100 text-yellow-800" rowspan="6">
+                                    <div class="font-bold">Office Hours</div>
+                                    <div class="text-xs mt-1">1:00 PM - 4:00 PM</div>
+                                </td>
+                            </tr>
+                            <!-- 1:30 PM Row -->
+                            <tr>
+                                <td class="p-3 h-16 border align-top text-gray-500 font-semibold">1:30 PM</td>
+                                <td class="border"></td>
+                                <td class="border"></td>
+                            </tr>
+                            <!-- 2:00 PM Row -->
+                            <tr>
+                                <td class="p-3 h-16 border align-top text-gray-500 font-semibold">2:00 PM</td>
+                                <td class="p-2 border bg-teal-100 text-teal-800" rowspan="6">
+                                    <div class="font-bold">DCP 4300</div>
+                                    <div class="text-xs mt-1">1:55 PM - 4:55 PM</div>
+                                </td>
+                                <td class="p-2 border bg-green-100 text-green-800" rowspan="6">
+                                    <div class="font-bold">URP 4273</div>
+                                    <div class="text-xs mt-1">1:55 PM - 4:55 PM</div>
+                                </td>
+                            </tr>
+                            <!-- 2:30 PM Row -->
+                            <tr>
+                                <td class="p-3 h-16 border align-top text-gray-500 font-semibold">2:30 PM</td>
+                            </tr>
+                            <!-- 3:00 PM Row -->
+                            <tr>
+                                <td class="p-3 h-16 border align-top text-gray-500 font-semibold">3:00 PM</td>
+                            </tr>
+                            <!-- 3:30 PM Row -->
+                            <tr>
+                                <td class="p-3 h-16 border align-top text-gray-500 font-semibold">3:30 PM</td>
+                            </tr>
+                            <!-- 4:00 PM Row -->
+                            <tr>
+                                <td class="p-3 h-16 border align-top text-gray-500 font-semibold">4:00 PM</td>
+                                <td class="border"></td>
+                            </tr>
+                             <!-- 4:30 PM Row -->
+                             <tr>
+                                <td class="p-3 h-16 border align-top text-gray-500 font-semibold">4:30 PM</td>
+                                <td class="border"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Footer Section -->
+            <div class="p-4 sm:p-6 bg-gray-50 border-t text-center">
+                <p class="text-sm text-gray-600">
+                    To book an appointment for Tuesday/Thursday office hours, please visit:
+                </p>
+                <a href="https://meeting.boomerangapp.com/vivian.wong.ufl.edu/meeting3" class="text-sm text-indigo-600 hover:underline font-semibold break-all">
+                    https://meeting.boomerangapp.com/vivian.wong.ufl.edu/meeting3
+                </a>
+            </div>
+        </div>
+        
+        <!-- Print Button -->
+        <div class="text-center mt-6 no-print">
+            <button onclick="window.print()" class="bg-gray-800 text-white font-bold py-2 px-6 rounded-lg hover:bg-gray-700 transition duration-300">
+                Print Schedule
+            </button>
+        </div>
+    </div>
+
+</body>
+</html>
+
