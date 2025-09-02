@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Custom styles for better print appearance */
+        /* Custom styles for better print appearance and UI */
         body {
             font-family: 'Inter', sans-serif;
             -webkit-print-color-adjust: exact; /* Ensures colors print in Chrome/Safari */
@@ -30,7 +30,7 @@
         }
     </style>
 </head>
-<body class="bg-gray-50 flex items-center justify-center min-h-screen p-4 sm:p-6 lg:p-8">
+<body class="bg-gray-50 flex flex-col items-center justify-center min-h-screen p-4 sm:p-6 lg:p-8">
 
     <div class="w-full max-w-5xl mx-auto printable-container">
         <div class="bg-white rounded-xl shadow-lg overflow-hidden">
@@ -55,19 +55,17 @@
                             </tr>
                         </thead>
                         <tbody class="text-sm">
-                            <!-- 12:00 PM Row -->
+                            <!-- Time Rows -->
                             <tr>
-                                <td class="p-2 h-12 border align-top text-gray-500 font-semibold">12:00 PM</td>
+                                <td class="p-2 h-12 border align-middle text-gray-500 font-semibold">12:00 PM</td>
+                                <td class="border" rowspan="2"></td>
                                 <td class="border"></td>
-                                <td class="border"></td>
-                                <td class="border" rowspan="10"></td>
+                                <td class="border" rowspan="2"></td>
                                 <td class="border"></td>
                                 <td class="border" rowspan="10"></td>
                             </tr>
-                            <!-- 12:30 PM Row -->
                             <tr>
-                                <td class="p-2 h-12 border align-top text-gray-500 font-semibold">12:30 PM</td>
-                                <td class="border"></td>
+                                <td class="p-2 h-12 border align-middle text-gray-500 font-semibold">12:30 PM</td>
                                 <td class="p-2 border bg-purple-100 text-purple-800" rowspan="2">
                                     <div class="font-bold">Office Hours</div>
                                     <div class="text-xs">(By Appointment)</div>
@@ -79,23 +77,21 @@
                                     <div class="text-xs mt-1">12:30 PM - 1:30 PM</div>
                                 </td>
                             </tr>
-                            <!-- 1:00 PM Row -->
                             <tr>
-                                <td class="p-2 h-12 border align-top text-gray-500 font-semibold">1:00 PM</td>
+                                <td class="p-2 h-12 border align-middle text-gray-500 font-semibold">1:00 PM</td>
+                                <td class="border" rowspan="6"></td>
                                 <td class="p-2 border bg-yellow-100 text-yellow-800" rowspan="6">
                                     <div class="font-bold">Office Hours</div>
                                     <div class="text-xs mt-1">1:00 PM - 4:00 PM</div>
                                 </td>
                             </tr>
-                            <!-- 1:30 PM Row -->
                             <tr>
-                                <td class="p-2 h-12 border align-top text-gray-500 font-semibold">1:30 PM</td>
+                                <td class="p-2 h-12 border align-middle text-gray-500 font-semibold">1:30 PM</td>
                                 <td class="border"></td>
                                 <td class="border"></td>
                             </tr>
-                            <!-- 2:00 PM Row -->
                             <tr>
-                                <td class="p-2 h-12 border align-top text-gray-500 font-semibold">2:00 PM</td>
+                                <td class="p-2 h-12 border align-middle text-gray-500 font-semibold">2:00 PM</td>
                                 <td class="p-2 border bg-teal-100 text-teal-800" rowspan="6">
                                     <div class="font-bold">DCP 4300</div>
                                     <div class="text-xs mt-1">1:55 PM - 4:55 PM</div>
@@ -105,28 +101,11 @@
                                     <div class="text-xs mt-1">1:55 PM - 4:55 PM</div>
                                 </td>
                             </tr>
-                            <!-- 2:30 PM Row -->
-                            <tr>
-                                <td class="p-2 h-12 border align-top text-gray-500 font-semibold">2:30 PM</td>
-                            </tr>
-                            <!-- 3:00 PM Row -->
-                            <tr>
-                                <td class="p-2 h-12 border align-top text-gray-500 font-semibold">3:00 PM</td>
-                            </tr>
-                            <!-- 3:30 PM Row -->
-                            <tr>
-                                <td class="p-2 h-12 border align-top text-gray-500 font-semibold">3:30 PM</td>
-                            </tr>
-                            <!-- 4:00 PM Row -->
-                            <tr>
-                                <td class="p-2 h-12 border align-top text-gray-500 font-semibold">4:00 PM</td>
-                                <td class="border"></td>
-                            </tr>
-                             <!-- 4:30 PM Row -->
-                             <tr>
-                                <td class="p-2 h-12 border align-top text-gray-500 font-semibold">4:30 PM</td>
-                                <td class="border"></td>
-                            </tr>
+                            <tr><td class="p-2 h-12 border align-middle text-gray-500 font-semibold">2:30 PM</td></tr>
+                            <tr><td class="p-2 h-12 border align-middle text-gray-500 font-semibold">3:00 PM</td></tr>
+                            <tr><td class="p-2 h-12 border align-middle text-gray-500 font-semibold">3:30 PM</td></tr>
+                            <tr><td class="p-2 h-12 border align-middle text-gray-500 font-semibold">4:00 PM</td><td class="border"></td><td class="border"></td></tr>
+                            <tr><td class="p-2 h-12 border align-middle text-gray-500 font-semibold">4:30 PM</td><td class="border"></td><td class="border"></td></tr>
                         </tbody>
                     </table>
                 </div>
@@ -134,22 +113,19 @@
 
             <!-- Footer Section -->
             <div class="p-4 sm:p-6 bg-gray-50 border-t text-center">
-                <p class="text-sm text-gray-600">
-                    To book an appointment for Tuesday/Thursday office hours, please visit:
-                </p>
-                <a href="https://meeting.boomerangapp.com/vivian.wong.ufl.edu/meeting3" class="text-sm text-indigo-600 hover:underline font-semibold break-all">
-                    https://meeting.boomerangapp.com/vivian.wong.ufl.edu/meeting3
-                </a>
+                <p class="text-sm text-gray-600">To book an appointment for Tuesday/Thursday office hours, please visit:</p>
+                <a href="https://meeting.boomerangapp.com/vivian.wong.ufl.edu/meeting3" class="text-sm text-indigo-600 hover:underline font-semibold break-all">https://meeting.boomerangapp.com/vivian.wong.ufl.edu/meeting3</a>
             </div>
         </div>
-        
-        <!-- Print Button -->
-        <div class="text-center mt-6 no-print">
-            <button onclick="window.print()" class="bg-gray-800 text-white font-bold py-2 px-6 rounded-lg hover:bg-gray-700 transition duration-300">
-                Print Schedule
-            </button>
-        </div>
+    </div>
+    
+    <!-- Print Button -->
+    <div class="text-center my-6 no-print">
+        <button onclick="window.print()" class="bg-gray-800 text-white font-bold py-2 px-6 rounded-lg hover:bg-gray-700 transition duration-300">
+            Print Schedule
+        </button>
     </div>
 
 </body>
 </html>
+
