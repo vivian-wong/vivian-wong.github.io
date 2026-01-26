@@ -1,445 +1,728 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta property='og:title' content='Vivian Wong'/>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-  body {
-    font-size: 1rem;
-    font-family: sans-serif;
-    width: auto;
-    margin: 0px;
-    padding: 0;
-    border: 0;
-  }
-  main {
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vivian W. H. Wong | University of Florida</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    padding-top: 50px;
-    font-size: 1rem;
-    font-family: sans-serif;
-    max-width: 1000px;
-    margin: 0 auto;
-    width: 80%;
-  }
+    <style>
+        /* --- CSS VARIABLES & RESET --- */
+        :root {
+            --bg-color: #FFFFFF;
+            --bg-alt: #F8F9FA;
+            --text-main: #333333;
+            --text-light: #666666;
+            --text-header: #2C3E50;
+            --accent-blue: #0056b3;
+            --accent-hover: #004494;
+            --border-color: #e0e0e0;
+            --nav-bg: #2e2d29;
+            --nav-text: #f2f2f2;
+            --max-width: 1000px;
+        }
 
-  a:link {color:#0066CC;} /* sets normal link color */
-  a:visited {color:#0066CC;} /* sets visited link color */
-  a:active {color:#0066CC;} /* sets active link color */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--text-main);
+            line-height: 1.6;
+            background-color: var(--bg-color);
+        }
 
-  html {
-    scroll-padding-top: 50px; /* height of sticky navbar */
-  }
+        h1, h2, h3, h4 {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-header);
+            margin-bottom: 0.5em;
+        }
 
-  ol { 
-    list-style-position:inside; 
-    padding:0x; 
-    margin:0x;
-  }
+        h1 { font-weight: 700; font-size: 2.2rem; }
+        h2 { font-weight: 600; font-size: 1.5rem; margin-top: 2rem; border-bottom: 2px solid var(--bg-alt); padding-bottom: 0.5rem; }
+        h3 { font-weight: 600; font-size: 1.2rem; margin-top: 1.5rem; }
 
-  img {
-    width: auto;
-    height: auto;
-    max-width: 15vw;
-    max-height: 20vw;
-    margin-top: 20px;
-  } 
+        a { color: var(--accent-blue); text-decoration: none; transition: color 0.2s; }
+        a:hover { color: var(--accent-hover); text-decoration: underline; }
 
-  .topnav {
-    overflow: hidden;
-    background-color: #2e2d29;
-    position: fixed;
-    top:0;
-    width:100%;
-  }
+        /* --- NAVIGATION --- */
+        .navbar {
+            background-color: var(--nav-bg);
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
 
-  .topnav a {
-    float: left;
-    display: block;
-    color: #D5D5D4;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-  }
+        .nav-container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
 
-  .topnav a:hover {
-    background-color: #ddd;
-    color: black;
-  }
+        .nav-brand {
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            font-size: 1.1rem;
+            padding: 15px 0;
+        }
 
-  .topnav .icon {
-    display: none;
-  }
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
 
-  .horizontal {
-      display: flex;
-      flex-direction: row;
-  }
+        .nav-links li { margin-left: 20px; }
 
-  .vertical {
-    display: flex;
-    flex-direction: column;
-    margin-right: auto;
-    margin-left: 10px;
-  }
+        .nav-links button {
+            background: none;
+            border: none;
+            color: #ccc;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            cursor: pointer;
+            padding: 15px 5px;
+            transition: color 0.3s;
+        }
 
-  @media screen and (max-width: 1017px) {
-    .topnav a:not(:first-child) {display: none;}
-    .topnav a.icon {
-      float: right;
-      display: block;
-    }
-  }
+        .nav-links button:hover, .nav-links button.active {
+            color: #fff;
+            border-bottom: 3px solid var(--accent-blue);
+        }
 
-  @media screen and (max-width: 1017px) {
-    .topnav.responsive {position: relative;}
-    .topnav.responsive .icon {
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-    .topnav.responsive a {
-      float: none;
-      display: block;
-      text-align: left;
-    }
-  }
+        /* Mobile Nav Toggle */
+        .menu-toggle { display: none; color: white; font-size: 1.5rem; cursor: pointer; }
 
-</style>
-<title>Vivian Wong (She/Her)- UF DCP</title>
+        /* --- LAYOUT --- */
+        main {
+            max-width: var(--max-width);
+            margin: 40px auto;
+            padding: 0 20px;
+            min-height: 80vh;
+        }
+
+        .tab-content { display: none; animation: fadeIn 0.4s ease; }
+        .tab-content.active { display: block; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* --- HERO SECTION (Home) --- */
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            background-color: var(--bg-alt);
+            border-radius: 12px;
+            margin-bottom: 40px;
+        }
+
+        /* NEW: Profile Image Styling */
+        .profile-img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid white;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        .hero h1 { margin-bottom: 0.2em; color: var(--text-header); }
+        .hero .affiliation { font-size: 1.1rem; color: var(--text-light); margin-bottom: 1.5rem; }
+        .hero .affiliation span { display: block; font-size: 0.95rem; margin-top: 5px; }
+        
+        .hero .mission {
+            font-size: 1.25rem;
+            font-style: italic;
+            max-width: 800px;
+            margin: 0 auto 2rem auto;
+            color: var(--text-header);
+            line-height: 1.5;
+        }
+
+        .hero-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .hero-icons a {
+            color: var(--text-main);
+            font-size: 2rem;
+            transition: transform 0.2s, color 0.2s;
+        }
+
+        .hero-icons a:hover {
+            color: var(--accent-blue);
+            transform: translateY(-3px);
+        }
+
+        /* --- NEWS LIST --- */
+        .news-item {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 15px;
+        }
+        .news-date {
+            font-weight: 700;
+            color: var(--accent-blue);
+            min-width: 100px;
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* --- RESEARCH CARDS --- */
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .research-card {
+            background: var(--bg-alt);
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .research-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+
+        .card-icon {
+            color: var(--accent-blue);
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .methodology-box {
+            background: #f0f7ff;
+            border-left: 4px solid var(--accent-blue);
+            padding: 20px;
+            margin-top: 40px;
+            border-radius: 4px;
+        }
+
+        /* --- PUBLICATIONS --- */
+        .filter-container {
+            margin-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .filter-group {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .filter-label {
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-right: 5px;
+            color: var(--text-light);
+            min-width: 60px;
+        }
+
+        .filter-btn {
+            background: var(--bg-alt);
+            border: 1px solid var(--border-color);
+            padding: 6px 14px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85rem;
+            transition: all 0.2s;
+        }
+
+        .filter-btn:hover { background: #e2e6ea; }
+        .filter-btn.active {
+            background: var(--accent-blue);
+            color: white;
+            border-color: var(--accent-blue);
+        }
+
+        .pub-list { list-style: none; }
+        
+        .pub-item {
+            margin-bottom: 20px;
+            padding-left: 15px;
+            border-left: 3px solid transparent;
+            transition: border-color 0.3s;
+        }
+        
+        .pub-item:hover { border-left-color: var(--accent-blue); }
+
+        .pub-title { font-weight: 600; color: var(--text-header); display: block; }
+        .pub-meta { font-size: 0.95rem; color: var(--text-light); }
+        .tag {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            padding: 2px 6px;
+            border-radius: 4px;
+            margin-right: 8px;
+            font-weight: 600;
+        }
+        .tag.journal { background-color: #e3f2fd; color: #0d47a1; }
+        .tag.conf { background-color: #f3e5f5; color: #7b1fa2; }
+        
+        .pub-links a {
+            font-size: 0.85rem;
+            margin-right: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        /* --- TEACHING & MISC --- */
+        .course-card {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--bg-alt);
+            padding: 15px 20px;
+            margin-bottom: 15px;
+            border-radius: 6px;
+        }
+        .eval-score {
+            font-weight: 700;
+            color: var(--accent-blue);
+            font-size: 1.1rem;
+        }
+
+        .button-primary {
+            display: inline-block;
+            background-color: var(--accent-blue);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+        .button-primary:hover {
+            background-color: var(--accent-hover);
+            text-decoration: none;
+            color: white;
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 50px;
+                left: 0;
+                width: 100%;
+                background: var(--nav-bg);
+                padding: 20px 0;
+            }
+            .nav-links.show { display: flex; }
+            .nav-links li { margin: 0; text-align: center; }
+            .nav-links button { width: 100%; padding: 15px; }
+            .menu-toggle { display: block; }
+            
+            .course-card { flex-direction: column; align-items: flex-start; gap: 10px; }
+            .hero h1 { font-size: 1.8rem; }
+        }
+    </style>
 </head>
 <body>
-<nav>
-  <div class="topnav" id="myTopnav">
-    <a style="color: #f2f2f2; font-size: 20px" href=".">Vivian Wong (She/Her)</a>
-    <a href="#about">About</a>
-    <a href="#pubs">Publications</a>
-    <a href="#industry">Industry Exp.</a>
-    <a href="#teaching">Teaching &amp; Service</a>
-    <a href="#awards">Awards &amp; Scholarships</a>
-    <a href="#outreach">Outreach</a>
-    <a href="#team">Team</a>
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-      <i class="fa fa-bars"></i>
-    </a>
-    </div>
-  </div>
-</nav>
 
-<main>
-<div class="horizontal", id="about">
-    <div class="vertical">
-      <img src="profile.jpg" alt="Profile Image" class="img">
-      <img src="cropped.jpg" alt="Artwork Image" class="img">
-	    
-      <!-- Icons -->
-      <div class="horizontal">
-        <a  href="https://scholar.google.com/citations?user=lKWigagAAAAJ&hl=en"><i class="ai ai-google-scholar-square ai-2x"></i></a>
-        <a  href="https://www.linkedin.com/in/wong-vivian"><i class="fa fa-linkedin fa-2x"></i></a>
-        <a  href="mailto: vivian.wong@ufl.edu"><i class="fa fa-envelope fa-2x"></i></a>
-        <a  href="Wong_CV_online.pdf"><i class="ai ai-cv ai-2x"></i></a>
-      </div>
-	    
-      <p>Office: AH446</p>
-      <p>
-        Credit of the photo goes to Fangze Liu. Credit of the artwork goes to <a href="https://www.tudelft.nl/en/ide/about-ide/people/goncalves-mg">Professor Milene Goncalves</a>.
-      </p>
-    </div>
-    <div class="vertical">
-      <h1>About</h1>
-      <p>
-      Hi! I am Vivian Wong, an Assistant Professor in the <a href="https://dcp.ufl.edu">College of Design, Construction and Planning</a>.</b> I have a joint appointment in the Rinker School of Construction Management(50%) and the Department of Urban Regional Planning (50%). I am also a member of UF's larger <a href="https://ai.ufl.edu">AI initiative</a> and an affiliate with the <a href="https://ai.research.ufl.edu">Artificial Intelligence and Informatics Research Institute (AIIRI)</a>. Previously, I completed my Ph.D. in Civil Engineering from Stanford University, where I was fortunate to be advised by <a href="http://eil.stanford.edu/law/">Prof. Kincho Law</a>. I was affiliated with the <a href="http://eil.stanford.edu">Engineering Informatics Group</a> and the <a href="https://korea.stanford.edu">Stanford Center at the Incheon Global Campus</a>. During my PhD study, I also interned at Amazon Science and Alibaba City Brain as an applied scientist intern and a research scientist intern, respectively. I completed my M.S. from Stanford University from 2017-2019 and my B.S. from University of Illinois at Urbana-Champaign from 2014-2017. My hometown is the lovely city of Toronto, Canada, and I also spent a delightful amount of my childhood in the cities of Hong Kong and Beijing.
-      </p>
-      <p>
-      I am broadly interested in identifying and addressing real-world motivated problems to assist in the design and management of the spatio-temporal flow of <b>people</b> and <b>resources</b> in our modern urban systems. My projects typically involve some combination of machine learning, problem formulation inspired by practical concerns, and systems implementation. 
-      </p>
-    <ol>
-	    <li> <b>Pedestrian behavior in the Built Environment:</b> individual, ambient and crowd sensing; spatio-temporal modeling; -> to understand and predict pedestrian, including the disabled population, mobility in large public venues. </li>
-	    <li><b>Smart Manufacturing and complex systems resource allocation:</b> computer vision; mathematical modeling and simulation for job shop problem; reinforcement learning -> to introduce more automation in smart factories for (1) part quality control and (2) system workflow optimization. Mathematical modeling and simulation for building construction -> to optimize construction crew allocation for post-disaster building recovery. </li>
-    </ol>
-    <p>I am also passionate about STEM education, diversity, and outreach. See <a href="#outreach">here</a> for more details.
-    </p>
-	<p>
-Undergraduate/MS/rotating PhD students currently in UF and interested in conducting research in our group should email me your CV and interests with the subject "<b>Prospective UF Student Researcher</b>”. 
-      </p>
-    </div>
-</div>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">Vivian Wong</div>
+            <div class="menu-toggle" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
+            <ul class="nav-links" id="navLinks">
+                <li><button onclick="openTab(event, 'home')" class="tab-link active">Home</button></li>
+                <li><button onclick="openTab(event, 'research')" class="tab-link">Research</button></li>
+                <li><button onclick="openTab(event, 'publications')" class="tab-link">Publications</button></li>
+                <li><button onclick="openTab(event, 'teaching')" class="tab-link">Teaching & Service</button></li>
+                <li><button onclick="openTab(event, 'team')" class="tab-link">Team</button></li>
+                <li><button onclick="openTab(event, 'vitae')" class="tab-link">Vitae</button></li>
+                <li><button onclick="openTab(event, 'misc')" class="tab-link">Miscellaneous</button></li>
+            </ul>
+        </div>
+    </nav>
 
-<div id="pubs">
-  <h1>Publications</h1>
-  <!-- Year 2025 Entries --> 
-   <tr style='mso-yfti-irow:53;height:21.0pt'>
-    <td style='padding:.75pt .75pt .75pt .75pt;height:21.0pt'>
-    <h2>2025</h2>
-    </td>
-  </tr>
+    <main>
 
-  <tr style='mso-yfti-irow:80;height:52.5pt'>
-    <td valign=top style='padding:.75pt .75pt .75pt .75pt;height:52.5pt'>
-      <p style='margin-bottom:9.0pt'><span style='font-family:Arial'>I. Gatmaitan, Y. Dong, S. Valipoor, V.W.H. Wong, <a href="https://dl.acm.org/doi/10.1145/3736425.3772111">“Poster Abstract: Dynamic Mobility Barrier Detection Using Wheelchair-mounted Sensors,”</a> ACMInternational Conference on Systems for Energy-Efficient Buildings, Cities, and Transportation (BuildSys’25), Golden, CO, Nov. 19-21, 2025, pp. 310-311.
-    </span></p>
-      </td>
-   </tr>
+        <section id="home" class="tab-content active">
+            <div class="hero">
+                <img src="profile.jpg" alt="Vivian Wong" class="profile-img">
+                
+                <h1>Dr. Vivian W. H. Wong</h1>
+                <div class="affiliation">
+                    Assistant Professor, <strong>University of Florida</strong><br>
+                    College of Design, Construction and Planning<br>
+                    <span>M.E. Rinker, Sr. School of Construction Management (50%)<br>
+                    Department of Urban and Regional Planning (50%)</span>
+                </div>
+                <p class="mission">
+                    "Developing intelligent, human-centric solutions to optimize the flow of people and resources in urban infrastructure systems."
+                </p>
+                <div class="hero-icons">
+                    <a href="https://scholar.google.com/citations?user=lKWigagAAAAJ&hl=en" title="Google Scholar"><i class="ai ai-google-scholar-square"></i></a>
+                    <a href="https://www.linkedin.com/in/wong-vivian" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:vivian.wong@ufl.edu" title="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="Wong_CV_online.pdf" title="CV"><i class="ai ai-cv"></i></a>
+                </div>
+            </div>
 
-  <tr style='mso-yfti-irow:80;height:52.5pt'>
-    <td valign=top style='padding:.75pt .75pt .75pt .75pt;height:52.5pt'>
-      <p style='margin-bottom:9.0pt'><span style='font-family:Arial'>Q. Yu, V. W. H. Wong, <a href="publications/PyRebuild-draft.pdf">"PyRebuild: A Python-Based Simulator For the Dynamic Post-Earthquake Housing Reconstruction Problem,”</a> ASCE International Conference on Computing in Civil Engineering, New Orleans, LA, May 11-14, 2025.
-    </span></p>
-      </td>
-   </tr>
+            <h2>Recent Updates</h2>
+            <div class="news-item">
+                <span class="news-date">Nov 2025</span>
+                <p>Poster abstract on dynamic mobility barrier detection accepted to <strong>ACM BuildSys'25</strong> (Golden, CO).</p>
+            </div>
+            <div class="news-item">
+                <span class="news-date">July 2025</span>
+                <p>Invited talk at the "Nigiwai: Placemaking Driven by Human Behavior" workshop at Stanford University.</p>
+            </div>
+            <div class="news-item">
+                <span class="news-date">June 2025</span>
+                <p>Awarded the <strong>UF Research Opportunity Seed Fund (ROSF)</strong> as Lead PI for "Sensing for Empathetic Built Environments".</p>
+            </div>
+            <div class="news-item">
+                <span class="news-date">May 2025</span>
+                <p>Paper on post-earthquake housing reconstruction simulation + RL accepted to <strong>ASCE i3CE 2025</strong> (New Orleans, LA).</p>
+            </div>
+            <div class="news-item">
+                <span class="news-date">Dec 2024</span>
+                <p>Paper on data-driven predictive modeling of pedestrian crowd flow accepted to <strong>IEEE Big Data 2024</strong> (Washington, DC).</p>
+            </div>
+        </section>
 
 
-<!-- Year 2024 Entries --> 
- <tr style='mso-yfti-irow:53;height:21.0pt'>
-  <td style='padding:.75pt .75pt .75pt .75pt;height:21.0pt'>
-  <h2>2024</h2>
-  </td>
-</tr>
+        <section id="research" class="tab-content">
+            <h1>Research Areas</h1>
+            <p>My research bridges the gap between theoretical AI/ML and practical implementation in civil infrastructure systems. We focus on two main pillars:</p>
 
-<tr style='mso-yfti-irow:80;height:52.5pt'>
-  <td valign=top style='padding:.75pt .75pt .75pt .75pt;height:52.5pt'>
-    <p style='margin-bottom:9.0pt'><span style='font-family:Arial'>V. W. H. Wong, <a
-    href="publications/IEEE_Big_Data_2024_v2_final.pdf"> 
-    "Enhancing Data-Driven Predictive Modeling of Pedestrian Crowd Flow with Spatial Priors – 
-    Case Studies with Post-Event Crowd Data on a University Campus,"</a> 2024 IEEE International Conference on Big Data (IEEE BigData), 
-    Washington, DC, USA, 2024, pp. 6795-6804, doi: 10.1109/BigData62323.2024.10825781.
-  </span></p>
-    </td>
- </tr>
+            <div class="research-grid">
+                <div class="research-card">
+                    <div class="card-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+                    </div>
+                    <h3>Sensing for Empathetic and Resilient Pedestrian Mobility</h3>
+                    <p>We utilize computer vision and deep graph neural networks to understand how people move through the built environment. Moving beyond simple tracking, our lab focuses on identifying mobility barriers for wheelchair users and optimizing pedestrian flow for safety in crowded scenarios.</p>
+                </div>
 
-<tr style='mso-yfti-irow:80;height:52.5pt'>
-  <td valign=top style='padding:.75pt .75pt .75pt .75pt;height:52.5pt'>
-    <p style='margin-bottom:9.0pt'><span style='font-family:Arial'>V. W. H. Wong, <a
-    href="http://eil.stanford.edu/publications/vivian_wong/dissertation_wong.pdf"> 
-    Spatio-temporal Representation Learning: Applications to Manufacturing Planning and Pedestrian Crowd Analysis</a>,
-   Ph.D. Thesis, Department of Civil and Environmental Engineering, 
-	Stanford University, Stanford, CA, June 2024.</span></p>
-    </td>
- </tr>
+                <div class="research-card">
+                    <div class="card-icon">
+                         <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z"></path><path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"></path><path d="M12 2v2"></path><path d="M12 22v-2"></path><path d="m17 20.66-1-1.73"></path><path d="M11 10.27 7 3.34"></path><path d="m20.66 17-1.73-1"></path><path d="m3.34 7 1.73 1"></path><path d="M14 12h8"></path><path d="M2 12h2"></path><path d="m20.66 7-1.73 1"></path><path d="m3.34 17 1.73-1"></path><path d="m17 3.34-1 1.73"></path><path d="m11 13.73-4 6.93"></path></svg>
+                    </div>
+                    <h3>Simulation and Automation of Operations & Logistics</h3>
+                    <p>We apply reinforcement learning and systems modeling to solve complex resource allocation problems. Our work creates actionable algorithms for dynamic dispatchment, applicable to both smart manufacturing floors and post-disaster urban logistics.</p>
+                </div>
+            </div>
 
- <tr style="mso-yfti-irow:80;height:52.5pt">
-    <td valign="top" style="padding:.75pt .75pt .75pt .75pt;height:52.5pt">
-       <p style="margin-bottom:9.0pt">
-	      <span style="font-family:Arial">M. M. Sato, V. W. H. Wong, H. Yeung, P. Witherell, and K. H. Law,  
-			<a href="https://www.astm.org/ssms20230035.html">Identification and Interpretation of Melt Pool Shapes in Laser Powder Bed Fusion with Machine Learning"</a>, 
-	      	<i>Smart and Sustainable Manufacturing Systems</i>, Apr. 2024, 8(1): 1-23.
-https://doi.org/10.1520/SSMS20230035
-	  </p>
-    </td>
- </tr>
-
-  <!-- Year 2023 Entries -->
- <tr style='mso-yfti-irow:53;height:21.0pt'>
-  <td style='padding:.75pt .75pt .75pt .75pt;height:21.0pt'>
-  <h2>2023</h2>
-  </td>
-</tr>
-
- <tr style="mso-yfti-irow:80;height:52.5pt">
-    <td valign="top" style="padding:.75pt .75pt .75pt .75pt;height:52.5pt">
-       <p style="margin-bottom:9.0pt">
-	      <span style="font-family:Arial">V. W. H. Wong, S. H. Kim, J. Park, J. Park and K. H. Law,
-			<a href="http://eil.stanford.edu/publications/vivian_wong/ISBJSSP_JMSE_EIL.pdf">"Generating Dispatching Rules for the Interrupting Swap-Allowed Blocking Job Shop Problem Using Graph Neural Network and Reinforcement Learning"</a>,
-	      	<i>ASME Journal of Manufacturing Science and Engineering, Jan 2024; 146(1): 011009</i>, 2023. https://doi.org/10.1115/1.4063652
-	  </p>
-    </td>
- </tr>
-
- <tr style="mso-yfti-irow:80;height:52.5pt">
-    <td valign="top" style="padding:.75pt .75pt .75pt .75pt;height:52.5pt">
-       <p style="margin-bottom:9.0pt">
-	      <span style="font-family:Arial">M. M. Sato, V. W. H. Wong, K. H. Law, H. Yeung, and P. Witherell,
-			<a href="https://asmedigitalcollection.asme.org/IDETC-CIE/proceedings-abstract/IDETC-CIE2023/87295/V002T02A054/1170427">"Explainability of Laser Powder Bed Fusion Melt Pool Classification Using Deep Learning"</a>,
-	      	<i>International Design Engineering Technical Conferences and Computers and Information in Engineering Conference</i>, Boston, MA, Aug. 20-23, 2023. https://doi.org/10.1115/DETC2023-109137.
-	  </p>
-    </td>
- </tr>
-
- <tr style="mso-yfti-irow:80;height:52.5pt">
-    <td valign="top" style="padding:.75pt .75pt .75pt .75pt;height:52.5pt">
-       <p style="margin-bottom:9.0pt">
-	      <span style="font-family:Arial">V. W. H. Wong and K. H. Law, <a href="http://eil.stanford.edu/publications/vivian_wong/i3ce-9338.pdf">Modeling Crowd Data and Spatial Connectivity as Graphs for Crowd Flow Forecasting in Public Urban Space</a>. <i>ASCE International Conference on Computing in Civil Engineering (i3CE)</i>, Corvallis, OR, June 25-28, 2023. https://ascelibrary.org/doi/10.1061/9780784485248.025
-	  </p>
-    </td>
- </tr>
-
- <tr style="mso-yfti-irow:80;height:52.5pt">
-    <td valign="top" style="padding:.75pt .75pt .75pt .75pt;height:52.5pt">
-       <p style="margin-bottom:9.0pt">
-	      <span style="font-family:Arial">V. W. H. Wong, S. H. Kim, J. Park, J. Park and K. H. Law,
-			<a href="http://eil.stanford.edu/publications/vivian_wong/isbjssp_msec.pdf">"Generating Dispatching Rules for the Interrupting Swap-Allowed Blocking Job Shop Problem Using Graph Neural Network and Reinforcement Learning"</a>,
-	      	<i>Manufacturing Science and Engineering Conference (MSEC)</i>, New Brunswick, NJ, June 12-16, 2023.
-	  </p>
-    </td>
- </tr>
-
-  <tr style="mso-yfti-irow:80;height:52.5pt">
-    <td valign="top" style="padding:.75pt .75pt .75pt .75pt;height:52.5pt">
-       <p style="margin-bottom:9.0pt">
-	      <span style="font-family:Arial">V. W. H. Wong and K. H. Law, <a href="http://eil.stanford.edu/publications/vivian_wong/algorithms-16-00154.pdf">Fusion of CCTV Video and Spatial Information for Automated Crowd Congestion Monitoring in Public Urban Spaces</a>. <i>Algorithms</i>, Mar 2023, 16(3):154. https://doi.org/10.3390/a16030154.
-	  </p>
-    </td>
- </tr>
-
-    <!-- Year 2022 Entries -->
- <tr style='mso-yfti-irow:53;height:21.0pt'>
-  <td style='padding:.75pt .75pt .75pt .75pt;height:21.0pt'>
-  <h2>2022</h2>
-  </td>
-</tr>
-
- <tr style="mso-yfti-irow:80;height:52.5pt">
-    <td valign="top" style="padding:.75pt .75pt .75pt .75pt;height:52.5pt">
-       <p style="margin-bottom:9.0pt">
-	      <span style="font-family:Arial">M. M. Sato, V. W. H. Wong, K. H. Law, H. Yeung, Z. Yang, B. Lane and P. Witherell,
-			<a href="http://eil.stanford.edu/publications/matthew_sato/AM_unsupervised_and_supervised.pdf">"Anomaly Detection of Laser Powder Bed Fusion Melt Pool Images Using Combined Unsupervised and Supervised Learning Methods"</a>,
-	      	<i>International Design Engineering Technical Conferences and Computers and Information in Engineering Conference</i>, St. Louis, MO, Aug. 14-17 2022.
-	  </p>
-    </td>
- </tr>
-
- <tr style="mso-yfti-irow:80;height:52.5pt">
-    <td valign="top" style="padding:.75pt .75pt .75pt .75pt;height:52.5pt">
-       <p style="margin-bottom:9.0pt">
-	      <span style="font-family:Arial">V. W. H. Wong, M. Ferguson, K. H. Law, Y. T. Lee and P. Witherell,  
-			<a href="http://eil.stanford.edu/publications/vivian_wong/am_unet_jcise.pdf">"Segmentation of Additive Manufacturing Defects Using U-Net"</a>, 
-	      	<i>ASME Journal of Computing and Information Science in Engineering.</i> June 2022; 22(3): 031005. https://doi.org/10.1115/1.4053078
-	  </p>
-    </td>
- </tr>
-
-<!-- Year 2021 Entries -->
- <tr style='mso-yfti-irow:53;height:21.0pt'>
-  <td style='padding:.75pt .75pt .75pt .75pt;height:21.0pt'>
-  <h2>2021</h2>
-  </td>
-</tr>
-
- <tr style="mso-yfti-irow:80;height:52.5pt">
-    <td valign="top" style="padding:.75pt .75pt .75pt .75pt;height:52.5pt">
-       <p style="margin-bottom:9.0pt">
-	      <span style="font-family:Arial">V. W. H. Wong, M. Ferguson, K. H. Law, Y. T. Lee and P. Witherell,  
-			<a href="http://eil.stanford.edu/publications/vivian_wong/am_unet_cie.pdf">"Segmentation of Additive Manufacturing Defects Using U-Net"</a>, 
-	      	<i>41th Computers and Information in Engineering Conference (CIE).</i> August 17-20, 2021.
-	  </p>
-    </td>
- </tr>
-    <!-- Year 2020 Entries -->
-    <h2>2020</h2>
-      <p style="margin-bottom:9.0pt">
-              <span style="font-family:Arial">V. W. H. Wong, M. Ferguson, K. H. Law, Y. T. Lee and P. Witherell,  
-            <a href="http://eil.stanford.edu/publications/vivian_wong/am_3dunet_aaai.pdf">"Automatic Volumetric Segmentation of Additive Manufacturing Defects with 3D U-Net"</a>, 
-            <i>AAAI 2020 Spring Symposia</i>, Stanford, CA, USA, Mar 23-25, 2020</span>
-      </p>
-    <!-- Year 2019 Entries -->
-    <h2>2019</h2>
-      <p style="margin-bottom:9.0pt">
-              <span style="font-family:Arial">V. W. H. Wong, M. Ferguson, K. H. Law and Y. T. Lee,  
-            <a href="http://eil.stanford.edu/publications/vivian_wong/assistive_learning.pdf">"An Assistive Learning Workflow on Annotating Images for Object Detection"</a>, 
-            <i>2019 IEEE International Conference on Big Data (IEEE BigData 2019)</i>, Los Angeles, CA, USA, Dec 9-12, 2019</span>
-      </p>
-</div>
-
-<div id="industry">
-  <h1>Industry Experience</h1>
-  <ul>
-    <li><b>Summer 2022</b>: Applied Scientist intern, Amazon's Softlines Discovery. Developed models for evaluating brands. 
-    <li><b>Summer 2018</b>: Research intern, Alibaba Cloud's City Brain project. </li>
-  </ul>
-</div>
-
-<div id="teaching">
-  <h1>Teaching and Service</h1>
-  <ul>
-    <li><b>Fall 2025</b>: Instructor for Intro to Planning Information System (URP 4273), UF</li>
-    <li><b>Fall 2025</b>: Instructor for AI in the Built Environment (DCP 4300), UF – view all Final Projects <a href="Fa25DCP4300Projects.html">here</a></li>
-    <li><b>Fall 2024</b>: Co-instructor for Intro to Planning Information System (URP 4273/6270), UF</li>
-    <ul>
-      <li>Mean Instructor Eval. Score: 4.61 (section 1-undergrad), 4.57 (section 2-grad).</li>
-    </ul>
-    <li><b>Winter 2020, 2022</b>: Teaching assistant for Structural Dynamics (CEE 283), Stanford</li>
-    <li><b>Autumn 2019, 2021, 2022</b>: Teaching assistant for Finite Element Methods in Structural Dynamics (CEE 284), Stanford</li>
-    <li><b>Fall 2016</b>:  Instructor for Engineering 100 and served as a peer advisor/mentor to freshmen, UIUC </li>
-  </ul>
-  <p>Journal Reviewer: IEEE Transactions on Neural Networks and Learning System, Optimization Letters, Automation in Construction, Engineering Applications to Artificial Intelligence, Buildings
-  </p>
-  <p>Conference Reviewer: IEEE Big Data Conference 2019</p>
-</div>
-
-<div id="awards">
-  <h1>Awards and Scholarships</h1>
-  <ul>
-    <li>UF Research Opportunity Seed Fund (ROSF) Award, 2025, $85,230 (no IDC)</li>
-    <li>UF SLA&P Director's Interdisciplinary Innovation Grant, 2025, $9,978 (no IDC)</li>
-    <li>Blume Research Fellowship, Stanford University, 2019</li>
-    <li>James Scholar, UIUC, 2014-2017</li>
-    <li>Earle J. Wheeler Scholarship, 2016</li>
-    <li>Fred S. Bailey International Service Travel Scholarship for Cause-Driven Leaders, 2016 </li>
-    <li>International Engineering Fellowship, 2016 </li>
-    <li>Wayne C. Teng Scholarship, 2015 </li>
-    <li>Dean's List, UIUC, 2014-2015 </li>
-  </ul>
-</div>
-
-<div id="outreach">
-  <h1>Outreach</h1>
-  My father's side of the family were Cambodian refugees. Their escape from the turbulent era of the Cambodian civil war taught me the values of perseverance, dedication, and resilience. These lessons have profoundly influenced my worldview and drive my work not just for diversity, equity, and inclusion, but also for social and environmental justice more broadly. I am fortunate to have participated in many awesome groups:</li>
-    <ul>
-        <li>Suspension Bridge Projects in Guatemala and Panama: Cofounded the <a href="https://www.uiucbridges.org">EIA chapter at UIUC</a>, I spent two memorable summers dedicated to building suspension bridges in underdeveloped communities in Guatemala and Panama. By collaborating with local communities and leveraging engineering expertise, we provided safer and more accessible transportation options, enhancing connectivity and improving the quality of life for residents. We were featured on the UIUC CEE Department news: <a href="https://cee.illinois.edu/news/student-organization-bridges-gaps-internationally">here</a>. </li>
-        <li>Saha Global field representative: Leveraging travel grants, I volunteered for <a href="https://sahaglobal.org">Saha Global</a>, a non-profit organization focused on sustainable development for low-income villages in West Africa. In Ghana, I contributed to the construction of solar-powered phone charging stations, empowering communities with access to reliable energy.</li>
-        <li>Society of Women Engineering (SWE): During my undergraduate studies, I dedicated my time and energy to SWE, advocating for gender equality in the engineering field. Recognizing my commitment, I was selected as the <a href="https://alltogether.swe.org/2017/10/swe-member-vivian-wong-is-always-connecting-always-engineering/">Always Connecting representative </a> for the annual conference, where I shared my awesome experience with SWE. </li>
-        <li>Shakes and Quakes Outreach at Sangamon Elementary School: Volunteering at Shakes and Quakes, I had the opportunity to engage with young students, fostering their interest in science and engineering. By organizing interactive educational activities using Legos and shake tables, I aimed to inspire the next generation of problem solvers and innovators.</li>
-        <li>Stanford Community Associate: At Stanford, I was a <a href="https://glo.stanford.edu/glo-services/community-associates">Community Associate</a> from 2018-2019. Working with the Graduate Life Office, I coordinated many multicultural, social, educational and fun events during the academic year to foster a sense of community in the Kennedy Graduate Residence. 
-    </ul>
-</div>
-
-<div id="team">
-  <h1>Team</h1>
-  [<b>Openings</b>]: <b>I am not currently hiring for DCP Ph.D. researcher positions. If you are curious about research and want to learn more about it, please email me. </b>
-  <p>
-  [Archived opening post 2024]: I am looking for passionate and curious minds to join my lab. <b>An application to either the URP or Construction concentration for DCP Ph.D. can be submitted at</b> <a href="https://dcp.ufl.edu/academics/phd8/phd-admissions/">DCP Ph.D. Admissions</a>. DCP Ph.D positions are STEM designated degrees and are fully funded through RA and TA for the duration of the studies (~4 years). Prospective students should meet <a href="https://dcp.ufl.edu/academics/phd8/phd-admissions/#:~:text=The%20DCP%20requires%20that%20applicants,score%20of%2080%20or%20higher.">UF DCP PhD admission requirements</a>, and have strong math/stats/programming background and passion for applied AI/ML research in the domain of urban societal systems. I also encourage students to pursue a PhD minor or another MS degree in CS/stats/EE, as well as summer internships in the industry, throughout the duration of the PhD. To express your interest in the open positions before submitting a full application, <b>prospective students are encouraged to fill out this</b> <a href="https://forms.gle/VufWP9FvzrpHagxp8"> pre-application interest form</a> to list relevant experiences, career objectives, and relevant linkedin/github pages. Afterwards, please email me indicating that you have completed the form, with the subject starting with "<b>Prospective Graduate Student</b>". <i>I HIGHLY RECOMMEND reading my <a href="Wong_RS_online.pdf">Research Statement</a> and previous publications before emailing me</i>.
-  </p>
-
-  
-  <tr style='mso-yfti-irow:53;height:21.0pt'>
-    <td style='padding:.75pt .75pt .75pt .75pt;height:21.0pt'>
-      <h2>Current Advisees</h2>
-    </td>
-  </tr> 
-
-  <li>Ao He, PhD student in DCP</li>
-  <ul>
-    <li>Research Interests: Bicyclist safety, behavior, and flow patterns, computer vision</li>
-    <li>Email: <a href="mailto:aohe@ufl.edu">aohe@ufl.edu</a></li>
-  </ul>
-  <li><a href="https://qianchen26.github.io">Qianchen Yu</a>, PhD student in DCP</li>
-  <ul>
-    <li>Research Interests: Post-disaster rebuild modeling and simulation, reinforcement learning</li>
-    <li>Email: <a href="mailto:yu.qianchen@ufl.edu">yu.qianchen@ufl.edu</a></li>
-  </ul>
-  <li>Isabelle Gatmaitan, Undergraduate Student in Statistics</li>
-  <ul>
-    <li>Research Interests: Empathetic built environment and sensing, human-computer interaction</li>
-    <li>Email: <a href="mailto:igatmaitan@ufl.edu">igatmaitan@ufl.edu</a></li>
-  </ul>
-</div>
+            <div class="methodology-box">
+                <h4>Building End-to-End Automation Pipelines</h4>
+                <p>We build full-stack automation pipelines: <strong>Data Ingest</strong> (Sensing/IoT) → <strong>Modeling</strong> (PyTorch/GNNs) → <strong>Evaluation</strong> → <strong>Deployment/Monitoring</strong> in simulators or real-world testbeds.</p>
+            </div>
+        </section>
 
 
-</main>
+        <section id="publications" class="tab-content">
+            <h1>Publications</h1>
+            
+            <div class="filter-container">
+                <div class="filter-group">
+                    <span class="filter-label">Type:</span>
+                    <button class="filter-btn active" data-group="type" onclick="filterPubs('type', 'all')">All</button>
+                    <button class="filter-btn" data-group="type" onclick="filterPubs('type', 'journal')">Journals</button>
+                    <button class="filter-btn" data-group="type" onclick="filterPubs('type', 'conf')">Conferences</button>
+                </div>
+                
+                <div class="filter-group">
+                    <span class="filter-label">Topic:</span>
+                    <button class="filter-btn active" data-group="domain" onclick="filterPubs('domain', 'all')">All</button>
+                    <button class="filter-btn" data-group="domain" onclick="filterPubs('domain', 'mobility')">Pedestrian Mobility</button>
+                    <button class="filter-btn" data-group="domain" onclick="filterPubs('domain', 'ops')">Operations & Logistics</button>
+                </div>
+            </div>
 
-<script>
-function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-}
-</script>
+            <ul class="pub-list">
+                <li class="pub-item" data-category="conf mobility">
+                    <span class="tag conf">Conf</span>
+                    <span class="pub-title">Dynamic Mobility Barrier Detection Using Wheelchair-mounted Sensors</span>
+                    <span class="pub-meta">I. Gatmaitan, Y. Dong, S. Valipoor, <strong>V.W.H. Wong</strong>. <em>ACM BuildSys 2025</em>.</span>
+                    <div class="pub-links"><a href="https://dl.acm.org/doi/10.1145/3736425.3772111">[Link]</a></div>
+                </li>
+                <li class="pub-item" data-category="conf ops">
+                    <span class="tag conf">Conf</span>
+                    <span class="pub-title">PyRebuild: A Python-Based Simulator For the Dynamic Post-Earthquake Housing Reconstruction Problem</span>
+                    <span class="pub-meta">Q. Yu, <strong>V. W. H. Wong</strong>. <em>ASCE i3CE 2025</em>.</span>
+                    <div class="pub-links"><a href="publications/PyRebuild-draft.pdf">[PDF]</a></div>
+                </li>
 
+                <li class="pub-item" data-category="conf mobility">
+                    <span class="tag conf">Conf</span>
+                    <span class="pub-title">Enhancing Data-Driven Predictive Modeling of Pedestrian Crowd Flow with Spatial Priors</span>
+                    <span class="pub-meta"><strong>V. W. H. Wong</strong>. <em>IEEE Big Data 2024</em>.</span>
+                    <div class="pub-links"><a href="publications/IEEE_Big_Data_2024_v2_final.pdf">[PDF]</a></div>
+                </li>
+                <li class="pub-item" data-category="journal ops">
+                    <span class="tag journal">Journal</span>
+                    <span class="pub-title">Identification and Interpretation of Melt Pool Shapes in Laser Powder Bed Fusion with Machine Learning</span>
+                    <span class="pub-meta">M. Sato, <strong>V. W. H. Wong</strong>, et al. <em>Smart and Sustainable Manufacturing Systems</em>, 2024.</span>
+                    <div class="pub-links"><a href="https://www.astm.org/ssms20230035.html">[DOI]</a></div>
+                </li>
+                <li class="pub-item" data-category="journal ops">
+                    <span class="tag journal">Journal</span>
+                    <span class="pub-title">Generating Dispatching Rules for the Interrupting Swap-Allowed Blocking Job Shop Problem</span>
+                    <span class="pub-meta"><strong>V. W. H. Wong</strong>, et al. <em>ASME Journal of Manufacturing Science and Engineering</em>, 2024.</span>
+                    <div class="pub-links"><a href="http://eil.stanford.edu/publications/vivian_wong/ISBJSSP_JMSE_EIL.pdf">[PDF]</a></div>
+                </li>
+
+                <li class="pub-item" data-category="journal mobility">
+                    <span class="tag journal">Journal</span>
+                    <span class="pub-title">Fusion of CCTV Video and Spatial Information for Automated Crowd Congestion Monitoring</span>
+                    <span class="pub-meta"><strong>V. W. H. Wong</strong>, K. H. Law. <em>Algorithms</em>, 2023.</span>
+                    <div class="pub-links"><a href="http://eil.stanford.edu/publications/vivian_wong/algorithms-16-00154.pdf">[PDF]</a></div>
+                </li>
+                <li class="pub-item" data-category="conf mobility">
+                    <span class="tag conf">Conf</span>
+                    <span class="pub-title">Modeling Crowd Data and Spatial Connectivity as Graphs for Crowd Flow Forecasting</span>
+                    <span class="pub-meta"><strong>V. W. H. Wong</strong>, K. H. Law. <em>ASCE i3CE 2023</em>.</span>
+                    <div class="pub-links"><a href="http://eil.stanford.edu/publications/vivian_wong/i3ce-9338.pdf">[PDF]</a></div>
+                </li>
+
+                <li class="pub-item" data-category="journal ops">
+                    <span class="tag journal">Journal</span>
+                    <span class="pub-title">Segmentation of Additive Manufacturing Defects Using U-Net</span>
+                    <span class="pub-meta"><strong>V. W. H. Wong</strong>, et al. <em>ASME Journal of Computing and Information Science in Engineering</em>, 2022.</span>
+                    <div class="pub-links"><a href="http://eil.stanford.edu/publications/vivian_wong/am_unet_jcise.pdf">[PDF]</a></div>
+                </li>
+            </ul>
+        </section>
+
+
+        <section id="teaching" class="tab-content">
+            <h1>Teaching</h1>
+            <p style="margin-bottom: 20px;">I believe in providing students with an adaptable, interdisciplinary skillset through problem-solving, quantitative understanding of engineering systems, and efficient data analysis.</p>
+
+            <div class="course-card">
+                <div>
+                    <h3>AI in the Built Environment (DCP 4300)</h3>
+                    <p>Fall 2025 | University of Florida</p>
+                    <a href="Fa25DCP4300Projects.html">View Student Final Projects</a>
+                </div>
+                <div class="eval-score">GatorEval Mean Instructor Score: 4.72 / 5.0</div>
+            </div>
+
+            <div class="course-card">
+                <div>
+                    <h3>Intro to Planning Information Systems (URP 4273)</h3>
+                    <p>Fall 2025 | University of Florida</p>
+                </div>
+                <div class="eval-score">GatorEval Mean Instructor Score: 4.50 / 5.0</div>
+            </div>
+
+            <div class="course-card">
+                <div>
+                    <h3>Intro to Planning Information Systems (URP 4273/6270)</h3>
+                    <p>Fall 2024 | University of Florida</p>
+                </div>
+                <div class="eval-score">GatorEval Mean Instructor Score: 4.61 (UG) / 4.57 (Grad)</div>
+            </div>
+
+            <h1>Academic Service</h1>
+            <ul>
+                <li><strong>Publication Chair:</strong> ACM BuildSys 2025</li>
+                <li><strong>Journal Reviewer:</strong> IEEE TNNLS, Engineering Applications of AI, Automation in Construction, Optimization Letters.</li>
+            </ul>
+        </section>
+
+
+        <section id="team" class="tab-content">
+            <h1>Research Team</h1>
+            <div style="background: #eef2f7; padding: 15px; border-radius: 5px; margin-bottom: 30px;">
+                <p><strong>Status:</strong> I am not currently hiring for Ph.D. researcher positions. If you are curious about research and want to learn more about it, please email me. Self-funded postdoctoral scholars interested in research with either Rinker or URP may also email me. <br>
+                <em>[Archived opening post 2024]:</em> I am looking for passionate and curious minds to join my lab. <b>An application to either the URP or Construction concentration for DCP Ph.D. can be submitted at</b> <a href="https://dcp.ufl.edu/academics/phd8/phd-admissions/">DCP Ph.D. Admissions</a>. DCP Ph.D positions are STEM designated degrees and are fully funded through RA and TA for the duration of the studies (~4 years). Prospective students should meet <a href="https://dcp.ufl.edu/academics/phd8/phd-admissions/#:~:text=The%20DCP%20requires%20that%20applicants,score%20of%2080%20or%20higher.">UF DCP PhD admission requirements</a>, and have strong math/stats/programming background and passion for applied AI/ML research in the domain of urban societal systems. I also encourage students to pursue a PhD minor or another MS degree in CS/stats/EE, as well as summer internships in the industry, throughout the duration of the PhD. To express your interest in the open positions before submitting a full application, <b>prospective students are encouraged to fill out this</b> <a href="https://forms.gle/VufWP9FvzrpHagxp8"> pre-application interest form</a> to list relevant experiences, career objectives, and relevant linkedin/github pages. Afterwards, please email me indicating that you have completed the form, with the subject starting with "<b>Prospective Graduate Student</b>". <i>I HIGHLY RECOMMEND reading my <a href="Wong_RS_online.pdf">Research Statement</a> and previous publications before emailing me</i>.</p>
+            </div>
+
+            <h3>Current Advisees</h3>
+            <ul style="list-style-type: none; padding-left: 0;">
+                <li style="margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid #eee;">
+                    <strong>Ao He</strong> (Ph.D. Student)<br>
+                    <em>Research:</em> Bicyclist safety, behavior, and flow patterns; computer vision.<br>
+                    <a href="mailto:aohe@ufl.edu">aohe@ufl.edu</a>
+                </li>
+                <li style="margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid #eee;">
+                    <strong>Qianchen Yu</strong> (Ph.D. Student)<br>
+                    <em>Research:</em> Post-disaster rebuild modeling and simulation; reinforcement learning.<br>
+                    <a href="https://qianchen26.github.io">Website</a> | <a href="mailto:yu.qianchen@ufl.edu">yu.qianchen@ufl.edu</a>
+                </li>
+                <li>
+                    <strong>Isabelle Gatmaitan</strong> (Undergraduate)<br>
+                    <em>Research:</em> Empathetic built environment and sensing.<br>
+                    <a href="mailto:igatmaitan@ufl.edu">igatmaitan@ufl.edu</a>
+                </li>
+            </ul>
+        </section>
+
+
+        <section id="misc" class="tab-content">
+            <h1>Miscellaneous</h1>
+            
+            <div style="display: flex; gap: 30px; flex-wrap: wrap; margin-top: 30px;">
+                <div style="flex: 1; min-width: 300px;">
+                    <h3>Personal</h3>
+                    <p>I was born in the lovely city of Toronto, Canada and a permanent resident of the U.S.. I also spent a delightful amount of my childhood in Hong Kong and Beijing. </p>
+                </div>
+                
+                <div style="flex: 1; min-width: 300px;">
+                    <h3>Table Tennis</h3>
+                    <p>I am a passionate competitive table tennis player. Beyond playing, I serve the community as:</p>
+                    <ul style="margin-top: 10px; margin-left: 20px;">
+                        <li><strong>Tournament Director:</strong> <a href="https://sites.google.com/view/ocala-table-tennis-club/tournaments">Ocala Table Tennis Club</a>. I organize tournaments and manage the club's web presence. </li>
+                        <li><strong>Faculty Advisor:</strong> University of Florida Table Tennis Club.</li>
+                        <li><strong>Formerly player for</strong> Stanford Table Tennis Team (2022-2024).</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="vitae" class="tab-content">
+            <h1>Curriculum Vitae</h1>
+            
+            <div style="margin: 20px 0;">
+                <a href="Wong_CV_online.pdf" class="button-primary"></i> Download Full CV (PDF)</a>
+            </div>
+
+            <h3>Education</h3>
+            <ul style="list-style: none;">
+                <li style="margin-bottom: 15px;">
+                    <strong>Ph.D. in Civil Engineering</strong> (2024)<br>
+                    Stanford University | Advisor: Kincho H. Law
+                </li>
+                <li style="margin-bottom: 15px;">
+                    <strong>M.S. in Civil Engineering</strong> (2019)<br>
+                    Stanford University
+                </li>
+                <li style="margin-bottom: 15px;">
+                    <strong>B.S. in Civil Engineering</strong> (2017)<br>
+                    University of Illinois at Urbana-Champaign
+                </li>
+            </ul>
+
+            <h3>Academic Appointments</h3>
+            <ul style="list-style: none;">
+                <li>
+                    <strong>Assistant Professor</strong> (2024 - Present)<br>
+                    University of Florida
+                </li>
+            </ul>
+
+            <h3>Industry Experience</h2>
+            <div class="news-item">
+                <span class="news-date">2022</span>
+                <div>
+                    <strong>Amazon Science</strong> (Applied Scientist Intern)<br>
+                    Developed models for evaluating brands in Softlines Discovery.
+                </div>
+            </div>
+            <div class="news-item">
+                <span class="news-date">2018</span>
+                <div>
+                    <strong>Alibaba City Brain</strong> (Research Intern)<br>
+                    Contributed to large-scale urban data initiatives for city management.
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // --- MULTI-FILTER STATE LOGIC ---
+        let activeFilters = {
+            type: 'all',
+            domain: 'all'
+        };
+
+        function filterPubs(group, value) {
+            // 1. Update State
+            activeFilters[group] = value;
+
+            // 2. Update Buttons UI
+            // Find all buttons in the specific group (Type or Topic) and reset them
+            const buttons = document.querySelectorAll(`.filter-btn[data-group="${group}"]`);
+            buttons.forEach(btn => btn.classList.remove('active'));
+
+            // Add active class to the clicked button
+            event.target.classList.add('active');
+
+            // 3. Filter the List Items
+            const items = document.querySelectorAll('.pub-item');
+            
+            items.forEach(item => {
+                const categories = item.getAttribute('data-category');
+                
+                // Check Type Match
+                const typeMatch = (activeFilters.type === 'all') || categories.includes(activeFilters.type);
+                
+                // Check Domain Match
+                const domainMatch = (activeFilters.domain === 'all') || categories.includes(activeFilters.domain);
+
+                // Show only if BOTH match (AND logic)
+                if (typeMatch && domainMatch) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // --- TAB SWITCHING LOGIC ---
+        function openTab(evt, tabName) {
+            var i, tabContent, tabLinks;
+            
+            tabContent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabContent.length; i++) {
+                tabContent[i].style.display = "none";
+                tabContent[i].classList.remove("active");
+            }
+
+            tabLinks = document.getElementsByClassName("tab-link");
+            for (i = 0; i < tabLinks.length; i++) {
+                tabLinks[i].className = tabLinks[i].className.replace(" active", "");
+            }
+
+            document.getElementById(tabName).style.display = "block";
+            setTimeout(() => document.getElementById(tabName).classList.add("active"), 10);
+            
+            if(evt) evt.currentTarget.className += " active";
+            
+            if(window.innerWidth <= 768) {
+                document.getElementById("navLinks").classList.remove("show");
+            }
+            window.scrollTo(0,0);
+        }
+
+        function toggleMenu() {
+            document.getElementById("navLinks").classList.toggle("show");
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("home").style.display = "block";
+        });
+    </script>
 </body>
 </html>
